@@ -614,15 +614,32 @@
 
   // ---------- overall progress on the start page ----------
   const MODULES = ["vad-ar-ai", "historia", "nar-ai-ar-battre", "ai-litteracitet", "ai-och-larande", "lagar-och-etik", "rattssaker-examination", "lararens-arbete", "planera"];
+  function started(m) {
+    try { for (let i = 0; i < localStorage.length; i++) { const k = localStorage.key(i); if (k.startsWith(`aiu:ex:${m}:`) || k.startsWith(`aiu:gate:${m}:`)) return true; } } catch (e) {}
+    return false;
+  }
+  // Updates the progress box on the start page. The box already has meaningful static content in the HTML,
+  // so it is useful even before the visitor has done anything or if scripts fail.
   function overall(host) {
     const L = langOf(host);
     const d = doneSet();
     const n = MODULES.filter(m => d.has(m)).length;
-    host.innerHTML = "";
-    host.append(el("h2", null, L === "sv" ? "Dina framsteg" : "Your progress"),
-      el("div", { class: "meter", role: "progressbar", "aria-valuemin": "0", "aria-valuemax": "9", "aria-valuenow": String(n) }, el("span", { style: `width:${Math.round(100 * n / 9)}%` })),
-      el("p", null, L === "sv" ? `${n} av 9 delar genomgångna. En del räknas som genomgången när du har gjort övningarna och skrivit vad du tar med dig.` : `${n} of 9 parts completed. A part counts as completed when you have done the exercises and written what you take with you.`),
-      el("p", null, el("a", { href: "certifikat.html", "data-internal": "" }, n === 9 ? (L === "sv" ? "Hämta ditt certifikat" : "Get your certificate") : (L === "sv" ? "Om certifikatet" : "About the certificate"))));
+    const S = L === "sv" ? { done: "Genomgången", started: "Påbörjad", not: "Inte påbörjad" } : { done: "Completed", started: "Started", not: "Not started" };
+    const meter = host.querySelector(".meter");
+    if (meter) { meter.setAttribute("aria-valuenow", String(n)); meter.firstElementChild.style.width = Math.round(100 * n / 9) + "%"; }
+    host.querySelectorAll(".ov-list li[data-page]").forEach(li => {
+      const m = li.dataset.page, st = li.querySelector(".ov-status");
+      const state = d.has(m) ? "done" : (started(m) ? "started" : "not");
+      li.dataset.state = state; if (st) st.textContent = S[state];
+    });
+    const next = MODULES.find(m => !d.has(m));
+    const sum = host.querySelector(".ov-summary");
+    if (sum && (n > 0 || MODULES.some(started))) {
+      const nextIdx = MODULES.indexOf(next) + 1;
+      sum.textContent = L === "sv"
+        ? (n === 9 ? "Alla nio delar är genomgångna. Du kan nu hämta ditt certifikat." : `${n} av 9 delar genomgångna. Fortsätt med del ${nextIdx}.`)
+        : (n === 9 ? "All nine parts are completed. You can now get your certificate." : `${n} of 9 parts completed. Continue with part ${nextIdx}.`);
+    }
   }
 
   // ---------- certificate ----------

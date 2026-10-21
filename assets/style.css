@@ -75,7 +75,8 @@ p, li { max-width: 72ch; }
 }
 .top-inner { max-width: var(--maxw); margin: 0 auto; padding: .7rem 16px; display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
 .brand { display: flex; align-items: center; gap: .7rem; color: #fff; text-decoration: none; }
-.brand-mark { width: 36px; height: 36px; border-radius: 50%; background: var(--ju-purple); display: grid; place-items: center; font-weight: 700; font-size: .85rem; letter-spacing: .02em; }
+.brand-logo { height: 40px; width: auto; display: block; }
+.brand-text { border-left: 1px solid rgba(255,255,255,.45); padding-left: .8rem; }
 .brand-text { display: flex; flex-direction: column; line-height: 1.15; }
 .brand-text strong { font-size: 1rem; }
 .brand-text span { font-size: .85rem; opacity: .9; }
@@ -349,3 +350,10 @@ footer.site .inner { max-width: var(--maxw); margin: 0 auto; padding: 1.4rem 16p
   body[data-page="certifikat"] .cert-sheet, body[data-page="certifikat"] .cert-sheet * { visibility: visible; }
   .cert-sheet { position: fixed; inset: 0; margin: 0; max-width: none; width: 100%; height: 100%; box-shadow: none; }
 }
+
+.ov-list { margin: .6rem 0; padding-left: 0; list-style: none; display: grid; gap: .25rem; }
+.ov-list li { display: flex; justify-content: space-between; gap: 1rem; border-bottom: 1px solid var(--border); padding: .3rem 0; max-width: none; }
+.ov-status { font-size: .88rem; color: var(--text-muted); white-space: nowrap; }
+.ov-list li[data-state="started"] .ov-status { color: var(--text); font-weight: 600; }
+.ov-list li[data-state="done"] .ov-status { color: var(--ok); font-weight: 700; }
+.ov-list li[data-state="done"] .ov-status::before { content: "✓ "; }
