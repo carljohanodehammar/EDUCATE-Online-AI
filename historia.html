@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="sv" data-lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-sv="Från MYCIN till miljarder parametrar | AI i utbildning" data-en="From MYCIN to billions of parameters | AI in education">Från MYCIN till miljarder parametrar | AI i utbildning</title>
+<meta name="description" content="Historien bakom dagens AI och varför moderna modeller inte går att granska inifrån.">
+<link rel="stylesheet" href="assets/style.css">
+<script>(function(){try{var q=new URLSearchParams(location.search).get('lang');var l=q||JSON.parse(localStorage.getItem('aiu:lang')||'"sv"');if(l==='en'){document.documentElement.lang='en';document.documentElement.dataset.lang='en';}}catch(e){}})();</script>
+<script src="assets/app.js" defer></script>
+</head>
+<body data-page="historia">
+<a class="skip" href="#main"><span class="l-sv">Hoppa till innehållet</span><span class="l-en">Skip to content</span></a>
+<header class="top">
+  <div class="top-inner">
+    <a class="brand" href="index.html" data-internal>
+      <span class="brand-mark" aria-hidden="true">JU</span>
+      <span class="brand-text"><strong><span class="l-sv">AI i utbildning</span><span class="l-en">AI in education</span></strong>
+      <span><span class="l-sv">En gemensam kunskapsram</span><span class="l-en">A shared knowledge base</span> · Jönköping University</span></span>
+    </a>
+    <div class="top-actions">
+      <button type="button" class="btn-top menu-btn" id="menuBtn" aria-controls="side" aria-expanded="false">Meny</button>
+      <button type="button" class="btn-top" id="langBtn" lang="en" aria-label="Switch to English">English</button>
+    </div>
+  </div>
+</header>
+<div class="layout">
+<nav class="side" id="side" aria-labelledby="navTitle"><h2 id="navTitle"><span class="l-sv">Innehåll</span><span class="l-en">Contents</span></h2><ol><li><a href="index.html" data-internal data-page="index"><span class="num" aria-hidden="true"></span><span><span class="l-sv">Start</span><span class="l-en">Start</span></span><span></span></a></li></ol><h2 class="group"><span class="l-sv">Delar</span><span class="l-en">Parts</span></h2><ol><li><a href="vad-ar-ai.html" data-internal data-page="vad-ar-ai"><span class="num" aria-hidden="true">1</span><span><span class="l-sv">Vad är AI?</span><span class="l-en">What is AI?</span></span><span class="done" role="img"></span></a></li><li><a href="historia.html" data-internal data-page="historia" aria-current="page"><span class="num" aria-hidden="true">2</span><span><span class="l-sv">Historia och granskning</span><span class="l-en">History and inspection</span></span><span class="done" role="img"></span></a></li><li><a href="nar-ai-ar-battre.html" data-internal data-page="nar-ai-ar-battre"><span class="num" aria-hidden="true">3</span><span><span class="l-sv">När AI är bättre</span><span class="l-en">When AI is better</span></span><span class="done" role="img"></span></a></li><li><a href="ai-litteracitet.html" data-internal data-page="ai-litteracitet"><span class="num" aria-hidden="true">4</span><span><span class="l-sv">AI-litteracitet</span><span class="l-en">AI literacy</span></span><span class="done" role="img"></span></a></li><li><a href="ai-och-larande.html" data-internal data-page="ai-och-larande"><span class="num" aria-hidden="true">5</span><span><span class="l-sv">AI och lärande</span><span class="l-en">AI and learning</span></span><span class="done" role="img"></span></a></li><li><a href="lagar-och-etik.html" data-internal data-page="lagar-och-etik"><span class="num" aria-hidden="true">6</span><span><span class="l-sv">Lagar och etik</span><span class="l-en">Law and ethics</span></span><span class="done" role="img"></span></a></li><li><a href="rattssaker-examination.html" data-internal data-page="rattssaker-examination"><span class="num" aria-hidden="true">7</span><span><span class="l-sv">Rättssäker examination</span><span class="l-en">Legally secure examination</span></span><span class="done" role="img"></span></a></li><li><a href="lararens-arbete.html" data-internal data-page="lararens-arbete"><span class="num" aria-hidden="true">8</span><span><span class="l-sv">Lärarens arbete</span><span class="l-en">The teacher's work</span></span><span class="done" role="img"></span></a></li><li><a href="planera.html" data-internal data-page="planera"><span class="num" aria-hidden="true">9</span><span><span class="l-sv">Planera med ramverk</span><span class="l-en">Planning with frameworks</span></span><span class="done" role="img"></span></a></li></ol><h2 class="group"><span class="l-sv">Stöd</span><span class="l-en">Support</span></h2><ol><li><a href="begrepp.html" data-internal data-page="begrepp"><span class="num" aria-hidden="true"></span><span><span class="l-sv">Begrepp</span><span class="l-en">Glossary</span></span><span></span></a></li><li><a href="kallor.html" data-internal data-page="kallor"><span class="num" aria-hidden="true"></span><span><span class="l-sv">Källor</span><span class="l-en">Sources</span></span><span></span></a></li><li><a href="certifikat.html" data-internal data-page="certifikat"><span class="num" aria-hidden="true"></span><span><span class="l-sv">Certifikat</span><span class="l-en">Certificate</span></span><span></span></a></li></ol></nav>
+<main id="main" tabindex="-1">
+<div class="l-sv" lang="sv">
+  <p class="crumbs">Del 2 av 9</p>
+  <h1>Från MYCIN till miljarder parametrar</h1>
+  <p class="lead">AI är inte nytt. Redan på 1970-talet fanns system som ställde diagnoser lika bra som läkare, och vars resonemang gick att följa regel för regel. Dagens modeller är mycket kraftfullare, men ingen människa kan längre läsa hur de kommer fram till sina svar. Den förändringen förklarar varför vi måste granska resultat och användning i stället för själva modellen.</p>
+  <div class="meta-row"><span>Cirka 2 timmar</span><span>3 interaktiva demonstrationer</span><span>1 kunskapstest</span></div>
+
+  <section class="goals" aria-labelledby="g2sv">
+    <h2 id="g2sv">Efter den här delen kan du</h2>
+    <ul>
+      <li>beskriva huvuddragen i AI:s historia, med svenska och europeiska exempel</li>
+      <li>förklara skillnaden mellan regelbaserade system och moderna neurala nätverk när det gäller insyn</li>
+      <li>förklara varför det inte är mänskligt möjligt att granska en modern modell inifrån, och vad det innebär för hur AI ska användas och kontrolleras</li>
+    </ul>
+  </section>
+  <div class="gate" data-kind="bridge"><script type="application/json">{"q": "Utifrån det du tog med dig om hur språkmodeller fungerar: tror du att det går att se in i en modell och förstå varför den svarar som den gör? Varför, eller varför inte?", "prev": "vad-ar-ai"}</script></div>
+
+
+  <h2>En kort tidslinje</h2>
+  <p>Filtrera tidslinjen för att se svenska, europeiska eller internationella milstolpar.</p>
+  <div class="tl-host">
+  <ol class="timeline">
+    <li data-where="Europa"><span class="yr">1950</span><span class="where">Europa</span> Alan Turing frågar i en artikel om maskiner kan tänka, och föreslår ett test: kan en människa avgöra om hon samtalar med en maskin?</li>
+    <li data-where="Internationellt"><span class="yr">1956</span><span class="where">Internationellt</span> Begreppet artificiell intelligens myntas vid en sommarkonferens i Dartmouth i USA.</li>
+    <li data-where="Internationellt"><span class="yr">1966</span><span class="where">Internationellt</span> Joseph Weizenbaum bygger ELIZA, ett enkelt samtalsprogram som speglar användarens ord. Många användare tillskriver programmet förståelse och känslor. Fenomenet kallas sedan dess ELIZA-effekten.</li>
+    <li data-where="Europa"><span class="yr">1972</span><span class="where">Europa</span> I Leeds ställer ett datorprogram diagnos vid akut buksmärta hos 304 patienter. Datorn har rätt i 91,8 procent av fallen, den mest erfarna klinikern i 79,6 procent.</li>
+    <li data-where="Internationellt"><span class="yr">1970-talet</span><span class="where">Internationellt</span> MYCIN utvecklas vid Stanford: ett expertsystem med omkring 600 regler som föreslår behandling vid allvarliga bakterieinfektioner.</li>
+    <li data-where="Internationellt"><span class="yr">1979</span><span class="where">Internationellt</span> I en blindad utvärdering bedöms 65 procent av MYCIN:s förslag som godtagbara, mot 42,5 till 62,5 procent för lärare vid Stanford. Systemet används ändå aldrig kliniskt.</li>
+    <li data-where="Internationellt"><span class="yr">1980-talet</span><span class="where">Internationellt</span> Expertsystem blir en industri. Mot slutet av decenniet visar de sig dyra att underhålla och svåra att skala. Intresse och finansiering sjunker, en period som kallas AI-vintern.</li>
+    <li data-where="Sverige"><span class="yr">1996</span><span class="where">Sverige</span> En avhandling i Lund visar hur neurala nätverk kan tolka elektrokardiogram (EKG). Året efter visar forskargruppen att nätverk kan upptäcka akut hjärtinfarkt i EKG.</li>
+    <li data-where="Internationellt"><span class="yr">2012</span><span class="where">Internationellt</span> Djupinlärning gör ett genombrott i bildigenkänning. Neurala nätverk i många lager blir den dominerande metoden.</li>
+    <li data-where="Internationellt"><span class="yr">2017</span><span class="where">Internationellt</span> Transformerarkitekturen publiceras. Den blir grunden för dagens språkmodeller.</li>
+    <li data-where="Europa"><span class="yr">2018</span><span class="where">Europa</span> Helsingfors universitet lanserar den öppna kursen Elements of AI, som blir en av världens mest genomförda introduktioner till AI.</li>
+    <li data-where="Internationellt"><span class="yr">2022</span><span class="where">Internationellt</span> ChatGPT släpps och generativ AI blir allmänt tillgänglig.</li>
+    <li data-where="Europa"><span class="yr">2024</span><span class="where">Europa</span> EU:s AI-förordning träder i kraft, med regler som börjar gälla stegvis.</li>
+    <li data-where="Europa"><span class="yr">2025</span><span class="where">Europa</span> AI-förordningens förbud och kravet på AI-kunnighet börjar gälla. Känsloigenkänning i utbildning förbjuds.</li>
+    <li data-where="Sverige"><span class="yr">2026</span><span class="where">Sverige</span> Regeringen presenterar Sveriges AI-strategi, med mål om AI-kompetens i hela utbildningssystemet.</li>
+    <li data-where="Europa"><span class="yr">2026</span><span class="where">Europa</span> AI-förordningen ändras. Kraven för högrisksystem, bland annat i utbildning, skjuts upp till december 2027. Kraven på transparens gäller från augusti 2026.</li>
+  </ol>
+  </div>
+
+  <h2>MYCIN: en AI som kunde förklara sig</h2>
+  <p>MYCIN byggdes av Edward Shortliffe vid Stanford under första halvan av 1970-talet. Systemet ställde frågor om patienten och om laboratorieprover, och föreslog vilken bakterie som troligen orsakade infektionen och vilket antibiotikum som borde ges.</p>
+  <p>Kunskapen i MYCIN låg i omkring 600 regler som läkare och forskare hade formulerat tillsammans. En regel kunde se ut ungefär så här: <em>om odlingen kommer från blod, och organismen är gramnegativ och stavformad, och patienten är en svårt sjuk värd, så finns det visst stöd för att organismen är Pseudomonas</em>. Varje regel hade en säkerhetsgrad, och systemet vägde ihop reglerna.</p>
+  <p>Det viktiga för oss är att <strong>MYCIN kunde förklara sig</strong>. Läkaren kunde fråga <em>varför</em> systemet ställde en viss fråga, och <em>hur</em> det kom fram till en slutsats. Svaret var inte en efterhandskonstruktion, utan de faktiska regler som hade använts. En människa kunde läsa hela kunskapsbasen och peka på en regel som var fel.</p>
+
+  <div class="ex" data-type="mycin">
+    <script type="application/json">{
+      "badge": "Demonstration", "title": "Följ ett resonemang i MYCIN:s stil",
+      "intro": "Ett förenklat konsultationssamtal i samma stil som MYCIN. Klicka på Nästa steg och öppna ”Varför frågar du det?” för att se hur systemet förklarar sig med de regler det faktiskt använder.",
+      "steps": [
+        {"sys": "1) Från vilken plats togs odlingen?<br>&gt; Blod"},
+        {"sys": "2) Vilken gramfärgning har organismen?<br>&gt; Gramnegativ", "why": "Jag försöker avgöra vilken organism det är. Regel 85 kräver att odlingen kommer från blod (bekräftat), att organismen är gramnegativ (frågas nu), att den är stavformad och att patienten är en svårt sjuk värd."},
+        {"sys": "3) Vilken form har organismen?<br>&gt; Stavformad", "why": "Fortfarande regel 85. Två av fyra villkor är uppfyllda. Formen är nästa villkor."},
+        {"sys": "4) Är patienten en svårt sjuk värd, till exempel med nedsatt immunförsvar?<br>&gt; Ja", "why": "Sista villkoret i regel 85. Om det är uppfyllt finns visst stöd (säkerhetsgrad 0,6) för att organismen är Pseudomonas."},
+        {"sys": "Slutsats: Det finns visst stöd (0,6) för att organismen är Pseudomonas aeruginosa. Förslag till behandling följer.", "whyLabel": "Hur kom du fram till det?", "why": "Regel 85 användes: odling från blod + gramnegativ + stavformad + svårt sjuk värd ⇒ Pseudomonas (0,6). Inga andra regler gav högre stöd för någon annan organism."}
+      ],
+      "after": "<b>Notera:</b> varje förklaring pekar på en regel som en människa har skrivit och kan läsa, ifrågasätta och ändra. Det är just den insynen som saknas i moderna modeller."
+    }</script>
+  </div>
+
+  <div class="box">
+    <span class="box-title">Varför användes MYCIN aldrig?</span>
+    <p>Det berodde inte på att systemet presterade dåligt. MYCIN var ett fristående program där all information om patienten måste skrivas in för hand, på en tid utan persondatorer. Dessutom var det oklart vem som bar ansvaret om ett förslag var fel. Frågorna om integration i arbetet och om ansvar är lika aktuella i dag.</p>
+  </div>
+
+    <div class="gate" data-kind="pause"><script type="application/json">{"q": "MYCIN presterade bra men användes aldrig. Vilka hinder ser du i dag för att AI ska användas klokt i din egen verksamhet?"}</script></div>
+  <h2>När maskinen redan var bättre</h2>
+  <p>Exemplet från Leeds 1972 visar att frågan om vad som händer när en maskin är bättre än människan inte är ny. Datorn ställde rätt diagnos oftare än den mest erfarna klinikern, och ändå blev programmet ingen självklar del av vården. Tre problem från den tiden känns igen i dag: systemet fungerade bäst i den miljö där det byggdes, det krävde att människor matade in rätt uppgifter, och det fanns ingen självklar plats för det i arbetsflödet. Del 3 tar upp vad som händer när människor börjar lita på systemen.</p>
+
+  <h2>Från regler till inlärda mönster</h2>
+  <p>Expertsystemen hade en svaghet: varje regel måste skrivas och underhållas av människor. Världen visade sig ha fler undantag än någon kunde formulera. Maskininlärning vände på arbetet. I stället för att skriva regler matar man systemet med exempel och låter det själv hitta mönstren. Det gjorde AI mycket mer kraftfull, men priset blev insynen.</p>
+
+    <div class="gate" data-kind="pause"><script type="application/json">{"q": "Innan du läser vidare: vad skulle krävas för att du skulle kunna lita på ett AI-förslag när du inte kan se hur det kom till?"}</script></div>
+  <h2>Varför det inte går att granska en modern modell</h2>
+  <p>Att granska en modell inifrån skulle betyda att förstå varför den ger ett visst svar, på samma sätt som man kunde läsa MYCIN:s regler. För dagens stora modeller är det inte mänskligt möjligt. Det finns sex skäl.</p>
+
+  <h3>1. Skalan</h3>
+  <p>MYCIN hade omkring 600 regler. En stor språkmodell har hundratals miljarder parametrar, alltså tal som tillsammans bestämmer vad modellen gör.</p>
+  <div class="ex" data-type="params">
+    <script type="application/json">{
+      "badge": "Räkna", "title": "Hur lång tid tar det att läsa allt?",
+      "intro": "Anta att du kan läsa och förstå en regel eller en parameter per sekund, dygnet runt, utan pauser.",
+      "options": [
+        {"label": "MYCIN, cirka 600 regler", "n": 600, "text": "Kunskapsbasen går att läsa på en förmiddag, och varje regel betyder något på egen hand."},
+        {"label": "En mindre modell, 7 miljarder parametrar", "n": 7000000000, "text": "En modell som kan köras på en kraftfull dator. Redan här skulle läsningen ta längre tid än ett människoliv, många gånger om."},
+        {"label": "GPT-3 (2020), 175 miljarder parametrar", "n": 175000000000, "text": "Modellen som ChatGPT ursprungligen byggde på. Läsningen skulle ta längre tid än den skrivna historien."},
+        {"label": "En mycket stor modell, 1 biljon parametrar", "n": 1000000000000, "text": "Storleksordningen för de största modellerna i dag. Och även om du hann läsa alla parametrar skulle du inte förstå någonting, se nästa punkt."}
+      ]
+    }</script>
+  </div>
+
+  <h3>2. Kunskapen är utspridd</h3>
+  <p>I MYCIN betydde varje regel något. I ett neuralt nätverk betyder en enskild parameter ingenting på egen hand. Kunskapen om till exempel ett begrepp är utspridd över miljontals parametrar, och samma parametrar bidrar till tusentals olika saker. Det finns ingen plats där det står vad modellen ”vet”.</p>
+  <div class="ex" data-type="weights">
+    <script type="application/json">{
+      "badge": "Demonstration", "title": "Be nätverket förklara sig",
+      "intro": "Här är 96 av modellens parametrar. Klicka på knappen för att be om en förklaring till ett beslut.",
+      "answer": "Det här är allt nätverket ”har att säga”: tal. Inget av dem motsvarar en regel, ett begrepp eller ett skäl. Forskningsfältet tolkningsbarhet gör framsteg i att hitta mönster i sådana tal, men kan ännu inte ge en fullständig förklaring av en stor modells beslut, och metoderna är inte något du som användare har tillgång till."
+    }</script>
+  </div>
+
+  <h3>3. Ingen har läst träningsdatan</h3>
+  <p>Stora modeller tränas på biljoner token: webbsidor, böcker, kod och annat material. Ingen människa har läst det, och leverantörerna redovisar sällan i detalj vad som ingår. Det går därför inte att veta vilka källor, skevheter eller fel som finns i det modellen har lärt sig av.</p>
+
+  <h3>4. Förklaringarna är också genererade</h3>
+  <p>Om du frågar en språkmodell varför den svarade som den gjorde får du ett svar. Men till skillnad från MYCIN är det svaret inte en utskrift av vad som hände inne i modellen. Det är ny genererad text, en trolig förklaring. Den kan stämma, men den kan också vara en efterhandskonstruktion. Detsamma gäller de steg som resonemangsmodeller visar.</p>
+
+  <h3>5. Modellen förändras</h3>
+  <p>Leverantörerna uppdaterar sina modeller, ofta utan att användaren märker det. Ett verktyg som fungerade på ett visst sätt i höstas kan bete sig annorlunda i dag. Det räcker alltså inte att pröva ett verktyg en gång.</p>
+
+  <h3>6. Förmågorna är inte konstruerade</h3>
+  <p>Ingen har programmerat in att en språkmodell ska kunna översätta, sammanfatta eller lösa en viss sorts uppgift. Förmågorna uppstår under träningen, och de upptäcks ofta först när någon prövar. Det betyder att ingen fullt ut vet vad en modell kan och inte kan, och att tester alltid är stickprov.</p>
+
+  <div class="box key">
+    <span class="box-title">Slutsatsen: granska resultatet, processen och användningen</span>
+    <p>Vi kan inte granska modellen inifrån. Det vi kan granska är vad den producerar, hur den används och vilka kontroller som finns runt den. Det är samma sak som när vi litar på en kollega: vi bedömer arbetet, inte hjärnan.</p>
+  </div>
+
+  <div class="pair">
+    <h3>I vården: CE-märkning räcker inte</h3>
+    <div class="prob"><span class="lbl">Problem</span><p>En CE-märkt AI-produkt kan fungera sämre i en ny miljö, med andra patienter, annan utrustning och andra arbetssätt än där den testades.</p></div>
+    <div class="sol"><span class="lbl">Lösning</span><p>Socialstyrelsens förstudie från 2026 slår fast att CE-märkning inte garanterar att produkten fungerar kliniskt korrekt i det lokala sammanhanget. Den kräver lokal validering och löpande kontroll, och varnar för automationsbias och ökat beroende av AI-förslag, särskilt hos mindre erfarna läkare.</p></div>
+  </div>
+  <div class="pair">
+    <h3>I utbildningen: texten avslöjar inte sitt ursprung</h3>
+    <div class="prob"><span class="lbl">Problem</span><p>På samma sätt som vi inte kan se in i modellen, kan vi inte se på en text om den är skriven med AI. AI-detektorer ger både missar och falsklarm, och deras resultat går inte att förklara.</p></div>
+    <div class="sol"><span class="lbl">Lösning</span><p>Bygg in underlaget i examinationen från början: moment där studenten visar och förklarar sitt kunnande. Del 7 visar hur.</p></div>
+  </div>
+  <div class="pair">
+    <h3>I ditt eget arbete: förklaringen är inte beviset</h3>
+    <div class="prob"><span class="lbl">Problem</span><p>En AI ger en övertygande motivering till ett förslag på bedömning eller återkoppling. Motiveringen känns som ett skäl att lita på förslaget.</p></div>
+    <div class="sol"><span class="lbl">Lösning</span><p>Pröva förslaget mot kriterierna och underlaget själv. En välformulerad förklaring är inte ett bevis för att förslaget är rätt.</p></div>
+  </div>
+
+  <div class="ex" data-type="choice">
+    <script type="application/json">{
+      "badge": "Kunskapstest", "title": "Testa din förståelse",
+      "questions": [
+        {"q": "Vad var det viktigaste som skilde MYCIN från dagens språkmodeller när det gäller insyn?", "options": [
+          {"t": "MYCIN var mer träffsäkert än alla moderna modeller."},
+          {"t": "MYCIN:s förklaringar var de faktiska regler som användes, och hela kunskapsbasen kunde läsas av en människa.", "ok": true},
+          {"t": "MYCIN kunde svara på frågor om alla medicinska områden."}
+        ], "explain": "Insynen i MYCIN kom från att kunskapen låg i läsbara regler, och att förklaringarna visade just de reglerna."},
+        {"q": "Varför användes MYCIN aldrig i vården?", "options": [
+          {"t": "För att systemet presterade sämre än läkarna."},
+          {"t": "För att det var svårt att integrera i arbetet och oklart vem som bar ansvaret.", "ok": true},
+          {"t": "För att det förbjöds av lagstiftningen."}
+        ], "explain": "MYCIN presterade väl i utvärderingen. Det föll på praktisk integration och ansvarsfrågor, som är lika aktuella i dag."},
+        {"q": "Du frågar en språkmodell varför den gav ett visst svar. Vad får du?", "options": [
+          {"t": "En utskrift av de beräkningar som gav svaret."},
+          {"t": "Ny genererad text som är en trolig förklaring, men som inte behöver stämma med vad som faktiskt hände i modellen.", "ok": true},
+          {"t": "Inget svar, eftersom modeller inte kan förklara sig."}
+        ], "explain": "Förklaringen är genererad på samma sätt som allt annat modellen skriver. Den kan vara rimlig utan att vara trogen."},
+        {"q": "Vilken slutsats följer av att moderna modeller inte går att granska inifrån?", "options": [
+          {"t": "Att AI inte bör användas alls."},
+          {"t": "Att vi måste granska resultat, process och användning, och bygga kontroller runt systemet.", "ok": true},
+          {"t": "Att det räcker att lita på leverantörens beskrivning."}
+        ], "explain": "Det är samma logik som i vården (lokal validering) och i examination (underlag som byggs in i uppgiften)."}
+      ]
+    }</script>
+  </div>
+
+  <div class="ex" data-type="reflect">
+    <script type="application/json">{
+      "id": "historia", "badge": "Reflektion", "title": "Koppla till din egen verksamhet",
+      "fields": [
+        {"label": "Vilket AI-stöd använder du, dina kollegor eller dina studenter redan i dag, med eller utan att kalla det AI?", "hint": "Tänk på rättstavning, översättning, sökmotorer, lärplattformens funktioner och ämnesspecifika verktyg."},
+        {"label": "Var i din undervisning skulle det spela roll att ingen kan se hur verktyget kom fram till sitt resultat?"},
+        {"label": "Hur skulle du kunna granska resultatet i stället för verktyget?"}
+      ]
+    }</script>
+  </div>
+  <div class="gate" data-kind="exit"><script type="application/json">{"q": "Vad är det viktigaste du tar med dig från den här delen? Formulera det så att du kan använda det i nästa del."}</script></div>
+</div>
+
+<div class="l-en" lang="en">
+  <p class="crumbs">Part 2 of 9</p>
+  <h1>From MYCIN to billions of parameters</h1>
+  <p class="lead">AI is not new. In the 1970s there were already systems that diagnosed as well as physicians, and whose reasoning could be followed rule by rule. Today's models are far more powerful, but no human can read how they reach their answers. That change explains why we must examine outputs and use rather than the model itself.</p>
+  <div class="meta-row"><span>About 2 hours</span><span>3 interactive demonstrations</span><span>1 knowledge check</span></div>
+
+  <section class="goals" aria-labelledby="g2en">
+    <h2 id="g2en">After this part you can</h2>
+    <ul>
+      <li>describe the main lines of the history of AI, with Swedish and European examples</li>
+      <li>explain the difference between rule-based systems and modern neural networks in terms of transparency</li>
+      <li>explain why it is not humanly possible to inspect a modern model from the inside, and what this means for how AI should be used and checked</li>
+    </ul>
+  </section>
+  <div class="gate" data-kind="bridge"><script type="application/json">{"q": "Based on what you took with you about how language models work: do you think it is possible to look inside a model and understand why it answers as it does? Why, or why not?", "prev": "vad-ar-ai"}</script></div>
+
+
+  <h2>A short timeline</h2>
+  <p>Filter the timeline to see Swedish, European or international milestones.</p>
+  <div class="tl-host">
+  <ol class="timeline">
+    <li data-where="Europe"><span class="yr">1950</span><span class="where">Europe</span> Alan Turing asks in an article whether machines can think, and proposes a test: can a person tell whether they are talking to a machine?</li>
+    <li data-where="International"><span class="yr">1956</span><span class="where">International</span> The term artificial intelligence is coined at a summer conference at Dartmouth in the United States.</li>
+    <li data-where="International"><span class="yr">1966</span><span class="where">International</span> Joseph Weizenbaum builds ELIZA, a simple conversation program that mirrors the user's words. Many users attribute understanding and feelings to it. The phenomenon has since been called the ELIZA effect.</li>
+    <li data-where="Europe"><span class="yr">1972</span><span class="where">Europe</span> In Leeds, a computer program diagnoses acute abdominal pain in 304 patients. The computer is right in 91.8 per cent of cases, the most experienced clinician in 79.6 per cent.</li>
+    <li data-where="International"><span class="yr">1970s</span><span class="where">International</span> MYCIN is developed at Stanford: an expert system with about 600 rules that recommends treatment for serious bacterial infections.</li>
+    <li data-where="International"><span class="yr">1979</span><span class="where">International</span> In a blinded evaluation, 65 per cent of MYCIN's recommendations are judged acceptable, against 42.5 to 62.5 per cent for Stanford faculty. The system is never used clinically.</li>
+    <li data-where="International"><span class="yr">1980s</span><span class="where">International</span> Expert systems become an industry. By the end of the decade they prove expensive to maintain and hard to scale. Interest and funding drop, a period known as the AI winter.</li>
+    <li data-where="Sweden"><span class="yr">1996</span><span class="where">Sweden</span> A doctoral thesis in Lund shows how neural networks can interpret electrocardiograms (ECGs). The following year the research group shows that networks can detect acute myocardial infarction in ECGs.</li>
+    <li data-where="International"><span class="yr">2012</span><span class="where">International</span> Deep learning makes a breakthrough in image recognition. Neural networks with many layers become the dominant method.</li>
+    <li data-where="International"><span class="yr">2017</span><span class="where">International</span> The transformer architecture is published. It becomes the basis of today's language models.</li>
+    <li data-where="Europe"><span class="yr">2018</span><span class="where">Europe</span> The University of Helsinki launches the open course Elements of AI, which becomes one of the most completed introductions to AI in the world.</li>
+    <li data-where="International"><span class="yr">2022</span><span class="where">International</span> ChatGPT is released and generative AI becomes widely available.</li>
+    <li data-where="Europe"><span class="yr">2024</span><span class="where">Europe</span> The EU AI Act enters into force, with rules applying in stages.</li>
+    <li data-where="Europe"><span class="yr">2025</span><span class="where">Europe</span> The AI Act's prohibitions and the AI literacy requirement apply. Emotion recognition in education is banned.</li>
+    <li data-where="Sweden"><span class="yr">2026</span><span class="where">Sweden</span> The Swedish government presents Sweden's AI strategy, with goals for AI competence across the education system.</li>
+    <li data-where="Europe"><span class="yr">2026</span><span class="where">Europe</span> The AI Act is amended. Requirements for high-risk systems, including in education, are postponed to December 2027. Transparency requirements apply from August 2026.</li>
+  </ol>
+  </div>
+
+  <h2>MYCIN: an AI that could explain itself</h2>
+  <p>MYCIN was built by Edward Shortliffe at Stanford in the first half of the 1970s. The system asked questions about the patient and laboratory tests, and suggested which bacterium was probably causing the infection and which antibiotic should be given.</p>
+  <p>MYCIN's knowledge was held in about 600 rules formulated jointly by physicians and researchers. A rule could look roughly like this: <em>if the culture is from blood, and the organism is gram-negative and rod-shaped, and the patient is a compromised host, then there is some evidence that the organism is Pseudomonas</em>. Each rule had a certainty factor, and the system combined the rules.</p>
+  <p>The important thing for us is that <strong>MYCIN could explain itself</strong>. The physician could ask <em>why</em> the system asked a certain question, and <em>how</em> it reached a conclusion. The answer was not an after-the-fact construction but the actual rules that had been used. A person could read the entire knowledge base and point to a rule that was wrong.</p>
+
+  <div class="ex" data-type="mycin">
+    <script type="application/json">{
+      "badge": "Demonstration", "title": "Follow reasoning in the style of MYCIN",
+      "intro": "A simplified consultation in the same style as MYCIN. Click Next step and open “Why do you ask?” to see how the system explains itself with the rules it actually uses.",
+      "steps": [
+        {"sys": "1) From what site was the culture taken?<br>&gt; Blood"},
+        {"sys": "2) What is the gram stain of the organism?<br>&gt; Gram-negative", "why": "I am trying to determine the identity of the organism. Rule 85 requires that the culture is from blood (confirmed), that the organism is gram-negative (asked now), that it is rod-shaped, and that the patient is a compromised host."},
+        {"sys": "3) What is the morphology of the organism?<br>&gt; Rod", "why": "Still rule 85. Two of four conditions are met. Morphology is the next condition."},
+        {"sys": "4) Is the patient a compromised host, for example with a weakened immune system?<br>&gt; Yes", "why": "The last condition in rule 85. If it holds, there is some evidence (certainty 0.6) that the organism is Pseudomonas."},
+        {"sys": "Conclusion: There is some evidence (0.6) that the organism is Pseudomonas aeruginosa. Treatment recommendation follows.", "whyLabel": "How did you conclude that?", "why": "Rule 85 was used: culture from blood + gram-negative + rod + compromised host ⇒ Pseudomonas (0.6). No other rule gave stronger evidence for another organism."}
+      ],
+      "after": "<b>Note:</b> every explanation points to a rule that a person wrote and can read, question and change. That is exactly the transparency missing in modern models."
+    }</script>
+  </div>
+
+  <div class="box">
+    <span class="box-title">Why was MYCIN never used?</span>
+    <p>Not because it performed poorly. MYCIN was a stand-alone program where all patient information had to be typed in by hand, in an era before personal computers. It was also unclear who would be responsible if a recommendation was wrong. The questions of integration into work and of responsibility are just as relevant today.</p>
+  </div>
+
+    <div class="gate" data-kind="pause"><script type="application/json">{"q": "MYCIN performed well but was never used. What obstacles do you see today to AI being used wisely in your own work?"}</script></div>
+  <h2>When the machine was already better</h2>
+  <p>The Leeds example from 1972 shows that the question of what happens when a machine outperforms people is not new. The computer made the right diagnosis more often than the most experienced clinician, yet the program never became a natural part of care. Three problems from that time are familiar today: the system worked best in the setting where it was built, it required people to enter the right information, and there was no obvious place for it in the workflow. Part 3 takes up what happens when people start to trust the systems.</p>
+
+  <h2>From rules to learned patterns</h2>
+  <p>Expert systems had a weakness: every rule had to be written and maintained by people. The world turned out to have more exceptions than anyone could formulate. Machine learning reversed the work. Instead of writing rules, you feed the system examples and let it find the patterns itself. This made AI far more powerful, but the price was transparency.</p>
+
+    <div class="gate" data-kind="pause"><script type="application/json">{"q": "Before reading on: what would it take for you to trust an AI suggestion when you cannot see how it came about?"}</script></div>
+  <h2>Why a modern model cannot be inspected</h2>
+  <p>Inspecting a model from the inside would mean understanding why it gives a particular answer, the way MYCIN's rules could be read. For today's large models, that is not humanly possible. There are six reasons.</p>
+
+  <h3>1. Scale</h3>
+  <p>MYCIN had about 600 rules. A large language model has hundreds of billions of parameters, numbers that together determine what the model does.</p>
+  <div class="ex" data-type="params">
+    <script type="application/json">{
+      "badge": "Calculate", "title": "How long would it take to read everything?",
+      "intro": "Assume you can read and understand one rule or one parameter per second, around the clock, without breaks.",
+      "options": [
+        {"label": "MYCIN, about 600 rules", "n": 600, "text": "The knowledge base can be read in a morning, and each rule means something on its own."},
+        {"label": "A smaller model, 7 billion parameters", "n": 7000000000, "text": "A model that can run on a powerful computer. Even here, reading would take longer than a human lifetime, many times over."},
+        {"label": "GPT-3 (2020), 175 billion parameters", "n": 175000000000, "text": "The model ChatGPT was originally based on. Reading would take longer than recorded history."},
+        {"label": "A very large model, 1 trillion parameters", "n": 1000000000000, "text": "The order of magnitude of the largest models today. And even if you read every parameter you would understand nothing; see the next point."}
+      ]
+    }</script>
+  </div>
+
+  <h3>2. Knowledge is distributed</h3>
+  <p>In MYCIN each rule meant something. In a neural network a single parameter means nothing on its own. Knowledge of, say, a concept is spread across millions of parameters, and the same parameters contribute to thousands of different things. There is no place where it says what the model “knows”.</p>
+  <div class="ex" data-type="weights">
+    <script type="application/json">{
+      "badge": "Demonstration", "title": "Ask the network to explain itself",
+      "intro": "Here are 96 of the model's parameters. Click the button to ask for an explanation of a decision.",
+      "answer": "This is all the network “has to say”: numbers. None of them corresponds to a rule, a concept or a reason. The research field of interpretability is making progress in finding patterns in such numbers, but cannot yet give a complete explanation of a large model's decisions, and the methods are not something you have access to as a user."
+    }</script>
+  </div>
+
+  <h3>3. Nobody has read the training data</h3>
+  <p>Large models are trained on trillions of tokens: web pages, books, code and other material. No human has read it, and providers rarely disclose in detail what is included. It is therefore impossible to know which sources, biases or errors are in what the model has learned from.</p>
+
+  <h3>4. The explanations are generated too</h3>
+  <p>If you ask a language model why it answered the way it did, you get an answer. But unlike MYCIN, that answer is not a printout of what happened inside the model. It is newly generated text, a plausible explanation. It may be accurate, but it may also be an after-the-fact construction. The same applies to the steps shown by reasoning models.</p>
+
+  <h3>5. The model changes</h3>
+  <p>Providers update their models, often without users noticing. A tool that behaved one way last autumn may behave differently today. Testing a tool once is therefore not enough.</p>
+
+  <h3>6. The capabilities are not designed</h3>
+  <p>Nobody programmed a language model to translate, summarise or solve a particular kind of task. The capabilities emerge during training and are often discovered only when someone tries. Nobody fully knows what a model can and cannot do, and tests are always samples.</p>
+
+  <div class="box key">
+    <span class="box-title">The conclusion: examine the output, the process and the use</span>
+    <p>We cannot inspect the model from the inside. What we can examine is what it produces, how it is used and what checks surround it. It is the same as when we trust a colleague: we judge the work, not the brain.</p>
+  </div>
+
+  <div class="pair">
+    <h3>In healthcare: CE marking is not enough</h3>
+    <div class="prob"><span class="lbl">Problem</span><p>A CE-marked AI product can perform worse in a new setting, with other patients, other equipment and other ways of working than where it was tested.</p></div>
+    <div class="sol"><span class="lbl">Solution</span><p>The Swedish National Board of Health and Welfare's 2026 pre-study states that CE marking does not guarantee clinical correctness in the local setting. It calls for local validation and ongoing monitoring, and warns of automation bias and growing dependence on AI suggestions, especially among less experienced physicians.</p></div>
+  </div>
+  <div class="pair">
+    <h3>In education: the text does not reveal its origin</h3>
+    <div class="prob"><span class="lbl">Problem</span><p>Just as we cannot see inside the model, we cannot tell from a text whether it was written with AI. AI detectors produce both misses and false alarms, and their results cannot be explained.</p></div>
+    <div class="sol"><span class="lbl">Solution</span><p>Build the evidence into the examination from the start: parts where the student shows and explains their knowledge. Part 7 shows how.</p></div>
+  </div>
+  <div class="pair">
+    <h3>In your own work: the explanation is not the proof</h3>
+    <div class="prob"><span class="lbl">Problem</span><p>An AI gives a convincing justification for a suggested grade or piece of feedback. The justification feels like a reason to trust the suggestion.</p></div>
+    <div class="sol"><span class="lbl">Solution</span><p>Test the suggestion against the criteria and the evidence yourself. A well-phrased explanation is not proof that the suggestion is right.</p></div>
+  </div>
+
+  <div class="ex" data-type="choice">
+    <script type="application/json">{
+      "badge": "Knowledge check", "title": "Test your understanding",
+      "questions": [
+        {"q": "What most distinguished MYCIN from today's language models in terms of transparency?", "options": [
+          {"t": "MYCIN was more accurate than all modern models."},
+          {"t": "MYCIN's explanations were the actual rules used, and the whole knowledge base could be read by a person.", "ok": true},
+          {"t": "MYCIN could answer questions about every medical field."}
+        ], "explain": "MYCIN's transparency came from knowledge held in readable rules, and from explanations that showed exactly those rules."},
+        {"q": "Why was MYCIN never used in healthcare?", "options": [
+          {"t": "Because it performed worse than physicians."},
+          {"t": "Because it was hard to integrate into work and unclear who bore responsibility.", "ok": true},
+          {"t": "Because it was prohibited by law."}
+        ], "explain": "MYCIN performed well in evaluation. It failed on practical integration and responsibility, which are just as relevant today."},
+        {"q": "You ask a language model why it gave a certain answer. What do you get?", "options": [
+          {"t": "A printout of the computations that produced the answer."},
+          {"t": "Newly generated text that is a plausible explanation, but need not match what actually happened in the model.", "ok": true},
+          {"t": "No answer, because models cannot explain themselves."}
+        ], "explain": "The explanation is generated like everything else the model writes. It can be reasonable without being faithful."},
+        {"q": "What follows from modern models not being inspectable from the inside?", "options": [
+          {"t": "That AI should not be used at all."},
+          {"t": "That we must examine output, process and use, and build checks around the system.", "ok": true},
+          {"t": "That it is enough to trust the provider's description."}
+        ], "explain": "It is the same logic as in healthcare (local validation) and in examination (evidence built into the task)."}
+      ]
+    }</script>
+  </div>
+
+  <div class="ex" data-type="reflect">
+    <script type="application/json">{
+      "id": "historia", "badge": "Reflection", "title": "Connect to your own practice",
+      "fields": [
+        {"label": "What AI support do you, your colleagues or your students already use today, whether or not you call it AI?", "hint": "Think of spell-checking, translation, search engines, learning platform features and subject-specific tools."},
+        {"label": "Where in your teaching would it matter that nobody can see how the tool reached its result?"},
+        {"label": "How could you examine the output instead of the tool?"}
+      ]
+    }</script>
+  </div>
+  <div class="gate" data-kind="exit"><script type="application/json">{"q": "What is the most important thing you take with you from this part? Phrase it so that you can use it in the next part."}</script></div>
+</div>
+<section class="journey" aria-live="polite"></section>
+<nav class="pager" aria-label="Sidor / Pages"><a class="prev" href="vad-ar-ai.html" data-internal rel="prev"><small><span class="l-sv">Föregående</span><span class="l-en">Previous</span></small><span class="l-sv">Vad är AI?</span><span class="l-en">What is AI?</span></a><a class="next" href="nar-ai-ar-battre.html" data-internal rel="next"><small><span class="l-sv">Nästa</span><span class="l-en">Next</span></small><span class="l-sv">När AI är bättre än människan</span><span class="l-en">When AI outperforms humans</span></a></nav>
+</main>
+</div>
+<footer class="site"><div class="inner">
+<p><span class="l-sv">Educate, Jönköping University. Materialet är stöd och rekommendationer, inte policy eller ett JU-gemensamt beslut. Vad som gäller i en viss kurs och examination beslutar examinator.</span><span class="l-en">Educate, Jönköping University. The material is support and recommendations, not policy or a university-wide decision. What applies in a particular course and examination is decided by the examiner.</span></p>
+<p><span class="l-sv">Licens: CC BY-NC-SA 4.0. Delar bygger på material från Stanford Teaching Commons under samma licens.</span><span class="l-en">Licence: CC BY-NC-SA 4.0. Parts build on material from Stanford Teaching Commons under the same licence.</span></p>
+</div></footer>
+</body>
+</html>

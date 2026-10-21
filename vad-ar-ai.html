@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="sv" data-lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-sv="Vad är AI? | AI i utbildning" data-en="What is AI? | AI in education">Vad är AI? | AI i utbildning</title>
+<meta name="description" content="Centrala begrepp, hur språkmodeller fungerar, möjligheter och begränsningar.">
+<link rel="stylesheet" href="assets/style.css">
+<script>(function(){try{var q=new URLSearchParams(location.search).get('lang');var l=q||JSON.parse(localStorage.getItem('aiu:lang')||'"sv"');if(l==='en'){document.documentElement.lang='en';document.documentElement.dataset.lang='en';}}catch(e){}})();</script>
+<script src="assets/app.js" defer></script>
+</head>
+<body data-page="vad-ar-ai">
+<a class="skip" href="#main"><span class="l-sv">Hoppa till innehållet</span><span class="l-en">Skip to content</span></a>
+<header class="top">
+  <div class="top-inner">
+    <a class="brand" href="index.html" data-internal>
+      <span class="brand-mark" aria-hidden="true">JU</span>
+      <span class="brand-text"><strong><span class="l-sv">AI i utbildning</span><span class="l-en">AI in education</span></strong>
+      <span><span class="l-sv">En gemensam kunskapsram</span><span class="l-en">A shared knowledge base</span> · Jönköping University</span></span>
+    </a>
+    <div class="top-actions">
+      <button type="button" class="btn-top menu-btn" id="menuBtn" aria-controls="side" aria-expanded="false">Meny</button>
+      <button type="button" class="btn-top" id="langBtn" lang="en" aria-label="Switch to English">English</button>
+    </div>
+  </div>
+</header>
+<div class="layout">
+<nav class="side" id="side" aria-labelledby="navTitle"><h2 id="navTitle"><span class="l-sv">Innehåll</span><span class="l-en">Contents</span></h2><ol><li><a href="index.html" data-internal data-page="index"><span class="num" aria-hidden="true"></span><span><span class="l-sv">Start</span><span class="l-en">Start</span></span><span></span></a></li></ol><h2 class="group"><span class="l-sv">Delar</span><span class="l-en">Parts</span></h2><ol><li><a href="vad-ar-ai.html" data-internal data-page="vad-ar-ai" aria-current="page"><span class="num" aria-hidden="true">1</span><span><span class="l-sv">Vad är AI?</span><span class="l-en">What is AI?</span></span><span class="done" role="img"></span></a></li><li><a href="historia.html" data-internal data-page="historia"><span class="num" aria-hidden="true">2</span><span><span class="l-sv">Historia och granskning</span><span class="l-en">History and inspection</span></span><span class="done" role="img"></span></a></li><li><a href="nar-ai-ar-battre.html" data-internal data-page="nar-ai-ar-battre"><span class="num" aria-hidden="true">3</span><span><span class="l-sv">När AI är bättre</span><span class="l-en">When AI is better</span></span><span class="done" role="img"></span></a></li><li><a href="ai-litteracitet.html" data-internal data-page="ai-litteracitet"><span class="num" aria-hidden="true">4</span><span><span class="l-sv">AI-litteracitet</span><span class="l-en">AI literacy</span></span><span class="done" role="img"></span></a></li><li><a href="ai-och-larande.html" data-internal data-page="ai-och-larande"><span class="num" aria-hidden="true">5</span><span><span class="l-sv">AI och lärande</span><span class="l-en">AI and learning</span></span><span class="done" role="img"></span></a></li><li><a href="lagar-och-etik.html" data-internal data-page="lagar-och-etik"><span class="num" aria-hidden="true">6</span><span><span class="l-sv">Lagar och etik</span><span class="l-en">Law and ethics</span></span><span class="done" role="img"></span></a></li><li><a href="rattssaker-examination.html" data-internal data-page="rattssaker-examination"><span class="num" aria-hidden="true">7</span><span><span class="l-sv">Rättssäker examination</span><span class="l-en">Legally secure examination</span></span><span class="done" role="img"></span></a></li><li><a href="lararens-arbete.html" data-internal data-page="lararens-arbete"><span class="num" aria-hidden="true">8</span><span><span class="l-sv">Lärarens arbete</span><span class="l-en">The teacher's work</span></span><span class="done" role="img"></span></a></li><li><a href="planera.html" data-internal data-page="planera"><span class="num" aria-hidden="true">9</span><span><span class="l-sv">Planera med ramverk</span><span class="l-en">Planning with frameworks</span></span><span class="done" role="img"></span></a></li></ol><h2 class="group"><span class="l-sv">Stöd</span><span class="l-en">Support</span></h2><ol><li><a href="begrepp.html" data-internal data-page="begrepp"><span class="num" aria-hidden="true"></span><span><span class="l-sv">Begrepp</span><span class="l-en">Glossary</span></span><span></span></a></li><li><a href="kallor.html" data-internal data-page="kallor"><span class="num" aria-hidden="true"></span><span><span class="l-sv">Källor</span><span class="l-en">Sources</span></span><span></span></a></li><li><a href="certifikat.html" data-internal data-page="certifikat"><span class="num" aria-hidden="true"></span><span><span class="l-sv">Certifikat</span><span class="l-en">Certificate</span></span><span></span></a></li></ol></nav>
+<main id="main" tabindex="-1">
+<div class="l-sv" lang="sv">
+  <p class="crumbs">Del 1 av 9</p>
+  <h1>Vad är AI?</h1>
+  <p class="lead">Artificiell intelligens (AI) är ett samlingsnamn för system som utför uppgifter som vi tidigare har tänkt kräver mänsklig intelligens. För att kunna ta ställning till AI i undervisningen behöver du förstå hur systemen i grova drag fungerar, vad de är bra på och var de brister.</p>
+  <div class="meta-row"><span>Cirka 2 timmar</span><span>1 interaktiv demonstration</span><span>1 kunskapstest</span></div>
+
+  <section class="goals" aria-labelledby="g1sv">
+    <h2 id="g1sv">Efter den här delen kan du</h2>
+    <ul>
+      <li>redogöra för centrala AI-begrepp och skillnaden mellan olika sorters AI</li>
+      <li>översiktligt förklara hur AI-system använder data och modeller, särskilt språkmodeller</li>
+      <li>beskriva möjligheter och begränsningar hos generativ AI, och hur begränsningarna kan hanteras</li>
+    </ul>
+  </section>
+  <div class="gate" data-kind="bridge"><script type="application/json">{"q": "Hur skulle du i dag förklara för en student vad en språkmodell gör när den svarar på en fråga? Skriv med egna ord, innan du läser."}</script></div>
+
+
+  <h2>Vad menar vi med AI?</h2>
+  <p>Det finns ingen enda definition av AI. EU:s AI-förordning beskriver ett AI-system ungefär som ett maskinbaserat system som med en viss grad av självständighet drar slutsatser utifrån den information det får, och utifrån det skapar resultat som förutsägelser, innehåll, rekommendationer eller beslut. Två saker i den beskrivningen är viktiga för dig som lärare:</p>
+  <ul>
+    <li><strong>Systemet drar slutsatser.</strong> Det följer inte bara ett recept som en människa har skrivit, utan har lärt sig mönster ur data.</li>
+    <li><strong>Resultatet kan påverka.</strong> En rekommendation eller ett förslag påverkar människors beslut, också när en människa formellt fattar beslutet. Det är därför del 3 handlar om samspelet mellan människa och AI.</li>
+  </ul>
+  <p>All AI som finns i dag är <strong>smal AI</strong>: system som är bra på vissa uppgifter. En allmän AI, som klarar alla intellektuella uppgifter som en människa klarar, finns inte. Dagens språkmodeller är dock betydligt bredare än tidigare system, och gränsen diskuteras livligt.</p>
+
+  <h2>Olika sorters AI</h2>
+  <div class="table-wrap">
+  <table>
+    <caption>Fyra sorters AI, med exempel från utbildning</caption>
+    <thead><tr><th scope="col">Sort</th><th scope="col">Hur den fungerar</th><th scope="col">Exempel i utbildning</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">Regelbaserad AI (expertsystem)</th><td>Människor skriver regler av typen ”om A och B, så C”. Systemet kombinerar reglerna. Resonemanget går att följa steg för steg.</td><td>Äldre system för stöd vid diagnos, enkla handledningsprogram med fasta svar.</td></tr>
+      <tr><th scope="row">Maskininlärning</th><td>Systemet lär sig mönster ur exempel i stället för att få regler. Det kan till exempel lära sig vilka egenskaper som hänger ihop med ett visst utfall.</td><td>Rekommendationer av övningar, prognoser om vilka studenter som riskerar att inte klara en kurs.</td></tr>
+      <tr><th scope="row">Djupinlärning</th><td>En form av maskininlärning med neurala nätverk i många lager. Mycket kraftfull för bild, tal och text, men svår att förstå inifrån.</td><td>Taligenkänning för textning, bildanalys, översättning.</td></tr>
+      <tr><th scope="row">Generativ AI</th><td>Djupinlärning som skapar nytt innehåll: text, bild, ljud, kod. Språkmodeller är den mest kända formen.</td><td>Chattverktyg, skrivstöd, bildgenerering, kodassistenter.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Gränserna är inte skarpa. Ett verktyg du använder kan kombinera flera sorter, till exempel en språkmodell som söker i en databas och följer fasta regler för vad den får svara.</p>
+
+  <h2>Hur en språkmodell fungerar</h2>
+  <p>En språkmodell är ett neuralt nätverk som har tränats på mycket stora mängder text för att förutsäga vad som kommer härnäst i en text. Det låter enkelt, men för att bli bra på det måste modellen fånga grammatik, fakta, resonemangsmönster och stil. Så här går det till, förenklat:</p>
+  <ol>
+    <li><strong>Texten delas upp i token.</strong> En token är ett ord eller en del av ett ord. Modellen ser inte bokstäver eller ord som vi gör, utan sekvenser av token.</li>
+    <li><strong>Förträning.</strong> Modellen får gå igenom enorma textmängder och justerar gång på gång sina parametrar, alltså de tal som styr nätverket, så att den blir bättre på att förutsäga nästa token. Moderna modeller har hundratals miljarder parametrar.</li>
+    <li><strong>Finjustering.</strong> Efter förträningen tränas modellen vidare för att följa instruktioner och föra samtal, bland annat genom att människor bedömer olika svar. Det är här modellen lär sig att vara ”hjälpsam”, och det är också här den kan lära sig att hålla med användaren för mycket.</li>
+    <li><strong>Användning.</strong> När du skriver något läser modellen allt i samtalet (det så kallade kontextfönstret), inklusive dolda instruktioner från tjänsten, och räknar ut sannolikheter för nästa token. En token väljs, läggs till, och proceduren upprepas.</li>
+  </ol>
+  <p>Två konsekvenser är viktiga. För det första: modellen <strong>slår inte upp</strong> svaret någonstans. Den genererar en trolig fortsättning. När det troliga och det sanna sammanfaller blir svaret rätt, annars inte. För det andra: valet av nästa token innehåller ett mått av slump. Samma fråga kan därför ge olika svar.</p>
+
+  <div class="ex" data-type="nexttoken">
+    <script type="application/json">{
+      "badge": "Demonstration", "title": "Hur väljer modellen nästa ord?",
+      "intro": "Staplarna visar påhittade men realistiska sannolikheter för nästa ord. Klicka för att låta ”modellen” välja. Dra i reglaget för temperatur: låg temperatur gör det vanligaste ordet ännu vanligare, hög temperatur gör ovanliga ord mer sannolika.",
+      "start": "Studenten lämnade in sin",
+      "note": "En riktig modell väljer bland tiotusentals möjliga token och räknar med hela samtalet. Principen är densamma: den mest sannolika fortsättningen är inte alltid den sanna.",
+      "tree": {"next": {
+        "uppsats": {"p": 0.42, "next": {"i": {"p": 0.4, "next": {"tid.": {"p": 0.7}, "Canvas.": {"p": 0.2}, "sista stund.": {"p": 0.1}}}, "för": {"p": 0.25, "next": {"sent.": {"p": 0.6}, "granskning.": {"p": 0.4}}}, "med": {"p": 0.2, "next": {"stolthet.": {"p": 0.5}, "påhittade källor.": {"p": 0.2}, "en AI-deklaration.": {"p": 0.3}}}, "efter": {"p": 0.15, "next": {"deadline.": {"p": 0.8}, "lunch.": {"p": 0.2}}}}},
+        "rapport": {"p": 0.28, "next": {"i": {"p": 0.5, "next": {"tid.": {"p": 0.8}, "par.": {"p": 0.2}}}, "till": {"p": 0.5, "next": {"examinatorn.": {"p": 0.7}, "handledaren.": {"p": 0.3}}}}},
+        "tentamen": {"p": 0.14, "next": {"tidigt.": {"p": 0.6}, "oläst.": {"p": 0.1}, "blank.": {"p": 0.3}}},
+        "ansökan": {"p": 0.1, "next": {"om": {"p": 1, "next": {"anstånd.": {"p": 0.6}, "tillgodoräknande.": {"p": 0.4}}}}},
+        "cykel": {"p": 0.06, "next": {"på": {"p": 1, "next": {"verkstaden.": {"p": 1}}}}}
+      }}
+    }</script>
+  </div>
+
+    <div class="gate" data-kind="pause"><script type="application/json">{"q": "Demonstrationen visade att modellen väljer en sannolik fortsättning. Vad betyder det för hur du bör läsa ett svar från en språkmodell i ditt ämne?"}</script></div>
+  <h2>Mer än text</h2>
+  <div class="grid">
+    <div class="card"><h3>Multimodal AI</h3><p>Modeller som tar emot och skapar flera sorters innehåll: text, bild, ljud och video. De kan beskriva ett fotografi av en tavla, läsa en handskriven lösning eller tolka ett diagram.</p></div>
+    <div class="card"><h3>Resonemangsmodeller</h3><p>Modeller som ”tänker” i flera steg innan de svarar. De blir bättre på matematik, logik och planering, men stegen de visar är genererad text och inte nödvändigtvis det som faktiskt avgjorde svaret.</p></div>
+    <div class="card"><h3>Sökning och egna dokument</h3><p>Många verktyg kan söka på webben eller i dokument du laddar upp och bygga svaret på det. Det minskar men tar inte bort risken för fel, och det väcker frågor om vilken information du lämnar ifrån dig.</p></div>
+    <div class="card"><h3>Agenter</h3><p>System som själva utför uppgifter i flera steg: öppnar webbsidor, fyller i formulär, skriver och kör kod. De kan till exempel genomföra en webbaserad uppgift eller ett quiz på egen hand, vilket påverkar hur examination utformas.</p></div>
+  </div>
+
+  <h2>Möjligheter</h2>
+  <p>Generativ AI kan vara ett kraftfullt stöd när den används med omdöme. Exempel som återkommer i forskning och praxis:</p>
+  <ul>
+    <li>återkoppling och förklaringar när studenten behöver dem, också utanför schemalagd tid</li>
+    <li>övningsmaterial, exempel och motexempel på olika nivåer</li>
+    <li>simuleringar av samtal, klientmöten eller rollspel</li>
+    <li>stöd i språk, struktur och tillgänglighet, till exempel klarspråk och alternativtexter</li>
+    <li>tid som frigörs för läraren i planering och administration</li>
+  </ul>
+  <p>Del 5 och del 8 går igenom vad forskningen säger om när dessa möjligheter faktiskt leder till bättre lärande.</p>
+
+    <div class="gate" data-kind="pause"><script type="application/json">{"q": "Gissa först: vilken begränsning hos generativ AI tror du ställer till mest problem i din undervisning, och varför?"}</script></div>
+  <h2>Begränsningar, och hur du hanterar dem</h2>
+  <div class="pair">
+    <h3>Påhittade uppgifter</h3>
+    <div class="prob"><span class="lbl">Problem</span><p>Språkmodeller kan formulera felaktiga påståenden, citat och referenser med stor säkerhet. Det kallas ofta hallucinationer, men konfabulering är ett mer träffande ord: modellen fyller i det som verkar troligt.</p></div>
+    <div class="sol"><span class="lbl">Lösning</span><p>Kontrollera påståenden och referenser i original. Lär studenterna att göra detsamma, och ställ krav som går att kontrollera, till exempel sidhänvisningar till källor de har läst.</p></div>
+  </div>
+  <div class="pair">
+    <h3>Skevheter i data</h3>
+    <div class="prob"><span class="lbl">Problem</span><p>Modellen speglar de texter den har tränats på, med deras skevheter. Det kan ge stereotypa beskrivningar av yrken, kön eller grupper, och sämre svar på mindre språk och för mindre representerade sammanhang.</p></div>
+    <div class="sol"><span class="lbl">Lösning</span><p>Granska vem och vad som framställs och hur. Använd skevheterna som undervisningsinnehåll: låt studenterna undersöka och jämföra svar.</p></div>
+  </div>
+  <div class="pair">
+    <h3>Inkonsekvens och smicker</h3>
+    <div class="prob"><span class="lbl">Problem</span><p>Samma fråga kan ge olika svar. Modeller tenderar också att hålla med användaren och bekräfta det användaren redan tror, eftersom de har tränats att vara hjälpsamma.</p></div>
+    <div class="sol"><span class="lbl">Lösning</span><p>Ställ frågan flera gånger och på olika sätt. Be uttryckligen om motargument och svagheter. Lita aldrig på ett enskilt svar i en fråga som spelar roll.</p></div>
+  </div>
+  <div class="pair">
+    <h3>Kunskapsgräns och aktualitet</h3>
+    <div class="prob"><span class="lbl">Problem</span><p>Modellens kunskap tar slut vid en viss tidpunkt. Regler, siffror och forskningsläge kan ha ändrats sedan dess, och modellen säger inte alltid till.</p></div>
+    <div class="sol"><span class="lbl">Lösning</span><p>Kontrollera allt som beskriver hur världen ser ut nu, som regler, priser och aktuell forskning, mot en aktuell källa.</p></div>
+  </div>
+  <div class="pair">
+    <h3>Information du lämnar ifrån dig</h3>
+    <div class="prob"><span class="lbl">Problem</span><p>Det du skriver in kan sparas, användas för träning eller hamna utanför EU. Studenters texter, namn och betyg är personuppgifter.</p></div>
+    <div class="sol"><span class="lbl">Lösning</span><p>Ta reda på vad som händer med informationen innan du matar in den. Del 6 går igenom hur du resonerar.</p></div>
+  </div>
+  <div class="pair">
+    <h3>Miljö och resurser</h3>
+    <div class="prob"><span class="lbl">Problem</span><p>Träning och användning av stora modeller kräver mycket energi och vatten för kylning av datacenter.</p></div>
+    <div class="sol"><span class="lbl">Lösning</span><p>Använd AI när det tillför något, välj mindre modeller för enkla uppgifter och ta med hållbarhet i diskussionen med studenterna.</p></div>
+  </div>
+
+  <div class="ex" data-type="choice">
+    <script type="application/json">{
+      "badge": "Kunskapstest", "title": "Testa din förståelse",
+      "questions": [
+        {"q": "Vad gör en språkmodell när den svarar på en fråga?", "options": [
+          {"t": "Den slår upp svaret i en databas med kontrollerade fakta."},
+          {"t": "Den genererar en sannolik fortsättning på texten, token för token.", "ok": true},
+          {"t": "Den söker alltid på webben och sammanfattar det den hittar."}
+        ], "explain": "En språkmodell genererar text utifrån sannolikheter. Vissa verktyg kan också söka på webben, men grundmekanismen är att förutsäga nästa token."},
+        {"q": "Varför kan samma fråga ge olika svar?", "options": [
+          {"t": "För att valet av nästa token innehåller ett mått av slump.", "ok": true},
+          {"t": "För att modellen lär sig av varje enskild användare i realtid."},
+          {"t": "För att svaret alltid hämtas från olika källor."}
+        ], "explain": "Slumpen i valet av token, och inställningar som temperatur, gör att svaren varierar."},
+        {"q": "En student lämnar in en text med en referens som inte finns. Vilken förklaring är mest sannolik om AI har använts?", "options": [
+          {"t": "Verktyget har kopierat en referens från en annan students arbete."},
+          {"t": "Modellen har genererat en trolig men påhittad referens.", "ok": true},
+          {"t": "Referensen fanns men har tagits bort från internet."}
+        ], "explain": "Konfabulering av referenser är välkänt. Observera att en felaktig referens också kan bero på slarv, och att den ensam inte visar att AI har använts. Det återkommer i del 7."},
+        {"q": "Vilket påstående om resonemangsmodeller stämmer?", "options": [
+          {"t": "Stegen de visar är alltid exakt det som avgjorde svaret."},
+          {"t": "De visar stegvisa resonemang som är genererad text och inte nödvändigtvis det som faktiskt avgjorde svaret.", "ok": true},
+          {"t": "De gör aldrig fel i matematik."}
+        ], "explain": "De visade stegen hjälper ofta modellen att lösa uppgiften bättre, men de är inte en garanterat trogen redovisning av beräkningen. Det återkommer i del 2."},
+        {"q": "Vad innebär det att en AI-agent kan genomföra uppgifter själv?", "options": [
+          {"t": "Den kan bara svara på frågor i en chatt."},
+          {"t": "Den kan utföra flera steg, som att öppna sidor och fylla i formulär, utan att en människa gör varje steg.", "ok": true},
+          {"t": "Den är alltid kopplad till lärosätets egna system."}
+        ], "explain": "Agenter kan till exempel genomföra webbaserade quiz och uppgifter. Det är en av anledningarna till att oövervakade quiz inte fungerar som kontroll av studentens eget kunnande."},
+        {"q": "Varför tenderar språkmodeller att hålla med användaren?", "options": [
+          {"t": "För att de har tränats för att vara hjälpsamma och bedömts av människor som ofta föredrar medhåll.", "ok": true},
+          {"t": "För att de har tillgång till användarens tidigare åsikter i alla tjänster."},
+          {"t": "För att de saknar information om ämnet."}
+        ], "explain": "Finjusteringen med mänskliga bedömningar kan belöna medhåll. Be därför uttryckligen om motargument."}
+      ]
+    }</script>
+  </div>
+
+  <h2>Öva själv</h2>
+  <ul>
+    <li><strong>Utmana en AI inom ditt eget område.</strong> Ställ allt mer specifika frågor om något du är expert på. När börjar svaren bli felaktiga, och märks det på formuleringarna?</li>
+    <li><strong>Be om källor.</strong> Be verktyget ange fem vetenskapliga källor i en fråga du kan väl. Kontrollera dem.</li>
+    <li><strong>Ställ samma fråga tre gånger.</strong> Jämför svaren. Vad skiljer, och vad är stabilt?</li>
+  </ul>
+  <div class="gate" data-kind="exit"><script type="application/json">{"q": "Vad är det viktigaste du tar med dig från den här delen? Formulera det så att du kan använda det i nästa del."}</script></div>
+</div>
+
+<div class="l-en" lang="en">
+  <p class="crumbs">Part 1 of 9</p>
+  <h1>What is AI?</h1>
+  <p class="lead">Artificial intelligence (AI) is an umbrella term for systems that perform tasks we used to think required human intelligence. To take a position on AI in teaching, you need a rough understanding of how these systems work, what they are good at and where they fall short.</p>
+  <div class="meta-row"><span>About 2 hours</span><span>1 interactive demonstration</span><span>1 knowledge check</span></div>
+
+  <section class="goals" aria-labelledby="g1en">
+    <h2 id="g1en">After this part you can</h2>
+    <ul>
+      <li>account for key AI concepts and the difference between kinds of AI</li>
+      <li>explain in outline how AI systems use data and models, especially language models</li>
+      <li>describe possibilities and limitations of generative AI, and how the limitations can be handled</li>
+    </ul>
+  </section>
+  <div class="gate" data-kind="bridge"><script type="application/json">{"q": "How would you explain to a student today what a language model does when it answers a question? Write in your own words, before you read."}</script></div>
+
+
+  <h2>What do we mean by AI?</h2>
+  <p>There is no single definition of AI. The EU AI Act describes an AI system roughly as a machine-based system that, with some degree of autonomy, infers from the input it receives how to generate outputs such as predictions, content, recommendations or decisions. Two things in that description matter for you as a teacher:</p>
+  <ul>
+    <li><strong>The system infers.</strong> It does not just follow a recipe written by a person. It has learned patterns from data.</li>
+    <li><strong>The output can influence.</strong> A recommendation or suggestion influences people's decisions, even when a person formally makes the decision. That is why part 3 deals with the interaction between humans and AI.</li>
+  </ul>
+  <p>All AI that exists today is <strong>narrow AI</strong>: systems that are good at certain tasks. A general AI that can do every intellectual task a human can does not exist. Today's language models are, however, much broader than earlier systems, and where the line goes is hotly debated.</p>
+
+  <h2>Kinds of AI</h2>
+  <div class="table-wrap">
+  <table>
+    <caption>Four kinds of AI, with examples from education</caption>
+    <thead><tr><th scope="col">Kind</th><th scope="col">How it works</th><th scope="col">Examples in education</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">Rule-based AI (expert systems)</th><td>People write rules of the type “if A and B, then C”. The system combines the rules. The reasoning can be followed step by step.</td><td>Older diagnostic support systems, simple tutoring programs with fixed answers.</td></tr>
+      <tr><th scope="row">Machine learning</th><td>The system learns patterns from examples instead of being given rules. It may learn which features are associated with a particular outcome.</td><td>Exercise recommendations, predictions of which students risk failing a course.</td></tr>
+      <tr><th scope="row">Deep learning</th><td>A form of machine learning using neural networks with many layers. Very powerful for images, speech and text, but hard to understand from the inside.</td><td>Speech recognition for captions, image analysis, translation.</td></tr>
+      <tr><th scope="row">Generative AI</th><td>Deep learning that creates new content: text, images, audio, code. Language models are the best-known form.</td><td>Chat tools, writing support, image generation, coding assistants.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>The boundaries are not sharp. A tool you use may combine several kinds, for example a language model that searches a database and follows fixed rules about what it may answer.</p>
+
+  <h2>How a language model works</h2>
+  <p>A language model is a neural network trained on very large amounts of text to predict what comes next in a text. That sounds simple, but to become good at it the model has to capture grammar, facts, patterns of reasoning and style. In simplified form:</p>
+  <ol>
+    <li><strong>Text is split into tokens.</strong> A token is a word or part of a word. The model does not see letters or words as we do, but sequences of tokens.</li>
+    <li><strong>Pre-training.</strong> The model works through enormous amounts of text and repeatedly adjusts its parameters, the numbers that control the network, to get better at predicting the next token. Modern models have hundreds of billions of parameters.</li>
+    <li><strong>Fine-tuning.</strong> After pre-training, the model is trained further to follow instructions and hold conversations, partly by having people rate different answers. This is where the model learns to be “helpful”, and also where it may learn to agree with the user too much.</li>
+    <li><strong>Use.</strong> When you type something, the model reads everything in the conversation (the context window), including hidden instructions from the service, and calculates probabilities for the next token. One token is chosen and added, and the procedure repeats.</li>
+  </ol>
+  <p>Two consequences matter. First, the model <strong>does not look up</strong> the answer anywhere. It generates a likely continuation. When the likely and the true coincide, the answer is right; otherwise it is not. Second, the choice of the next token involves an element of chance. The same question can therefore produce different answers.</p>
+
+  <div class="ex" data-type="nexttoken">
+    <script type="application/json">{
+      "badge": "Demonstration", "title": "How does the model choose the next word?",
+      "intro": "The bars show invented but realistic probabilities for the next word. Click to let the “model” choose. Move the temperature slider: low temperature makes the most common word even more common, high temperature makes unusual words more likely.",
+      "start": "The student handed in their",
+      "note": "A real model chooses among tens of thousands of possible tokens and takes the whole conversation into account. The principle is the same: the most likely continuation is not always the true one.",
+      "tree": {"next": {
+        "essay": {"p": 0.42, "next": {"on": {"p": 0.4, "next": {"time.": {"p": 0.7}, "Canvas.": {"p": 0.2}, "the last day.": {"p": 0.1}}}, "for": {"p": 0.25, "next": {"marking.": {"p": 0.6}, "review.": {"p": 0.4}}}, "with": {"p": 0.2, "next": {"pride.": {"p": 0.5}, "invented sources.": {"p": 0.2}, "an AI declaration.": {"p": 0.3}}}, "after": {"p": 0.15, "next": {"the deadline.": {"p": 0.8}, "lunch.": {"p": 0.2}}}}},
+        "report": {"p": 0.28, "next": {"on": {"p": 0.5, "next": {"time.": {"p": 0.8}, "Friday.": {"p": 0.2}}}, "to": {"p": 0.5, "next": {"the examiner.": {"p": 0.7}, "the supervisor.": {"p": 0.3}}}}},
+        "exam": {"p": 0.14, "next": {"early.": {"p": 0.6}, "unread.": {"p": 0.1}, "blank.": {"p": 0.3}}},
+        "application": {"p": 0.1, "next": {"for": {"p": 1, "next": {"an extension.": {"p": 0.6}, "credit transfer.": {"p": 0.4}}}}},
+        "bicycle": {"p": 0.06, "next": {"for": {"p": 1, "next": {"repair.": {"p": 1}}}}}
+      }}
+    }</script>
+  </div>
+
+    <div class="gate" data-kind="pause"><script type="application/json">{"q": "The demonstration showed that the model chooses a likely continuation. What does that mean for how you should read an answer from a language model in your subject?"}</script></div>
+  <h2>More than text</h2>
+  <div class="grid">
+    <div class="card"><h3>Multimodal AI</h3><p>Models that take in and produce several kinds of content: text, images, audio and video. They can describe a photo of a whiteboard, read a handwritten solution or interpret a chart.</p></div>
+    <div class="card"><h3>Reasoning models</h3><p>Models that “think” in several steps before answering. They do better at mathematics, logic and planning, but the steps they show are generated text and not necessarily what actually determined the answer.</p></div>
+    <div class="card"><h3>Search and your own documents</h3><p>Many tools can search the web or documents you upload and base the answer on them. This reduces but does not remove the risk of errors, and it raises questions about what information you hand over.</p></div>
+    <div class="card"><h3>Agents</h3><p>Systems that carry out multi-step tasks themselves: open web pages, fill in forms, write and run code. They can, for example, complete a web-based assignment or quiz on their own, which affects how examination is designed.</p></div>
+  </div>
+
+  <h2>Possibilities</h2>
+  <p>Generative AI can be powerful support when used with judgement. Examples that recur in research and practice:</p>
+  <ul>
+    <li>feedback and explanations when the student needs them, also outside scheduled hours</li>
+    <li>practice material, examples and counter-examples at different levels</li>
+    <li>simulations of conversations, client meetings or role plays</li>
+    <li>support with language, structure and accessibility, such as plain language and alt text</li>
+    <li>time freed up for the teacher in planning and administration</li>
+  </ul>
+  <p>Parts 5 and 8 go through what research says about when these possibilities actually lead to better learning.</p>
+
+    <div class="gate" data-kind="pause"><script type="application/json">{"q": "Guess first: which limitation of generative AI do you think causes most problems in your teaching, and why?"}</script></div>
+  <h2>Limitations, and how to handle them</h2>
+  <div class="pair">
+    <h3>Invented information</h3>
+    <div class="prob"><span class="lbl">Problem</span><p>Language models can state false claims, quotations and references with great confidence. This is often called hallucination, but confabulation is a better word: the model fills in what seems likely.</p></div>
+    <div class="sol"><span class="lbl">Solution</span><p>Check claims and references in the original. Teach students to do the same, and set requirements that can be checked, such as page references to sources they have read.</p></div>
+  </div>
+  <div class="pair">
+    <h3>Bias in data</h3>
+    <div class="prob"><span class="lbl">Problem</span><p>The model reflects the texts it was trained on, including their biases. This can produce stereotyped descriptions of professions, gender or groups, and weaker answers in smaller languages and less represented contexts.</p></div>
+    <div class="sol"><span class="lbl">Solution</span><p>Examine who and what is portrayed, and how. Use the biases as teaching content: let students investigate and compare answers.</p></div>
+  </div>
+  <div class="pair">
+    <h3>Inconsistency and sycophancy</h3>
+    <div class="prob"><span class="lbl">Problem</span><p>The same question can give different answers. Models also tend to agree with the user and confirm what the user already believes, because they have been trained to be helpful.</p></div>
+    <div class="sol"><span class="lbl">Solution</span><p>Ask the question several times and in different ways. Explicitly ask for counter-arguments and weaknesses. Never rely on a single answer in a question that matters.</p></div>
+  </div>
+  <div class="pair">
+    <h3>Knowledge cut-off and currency</h3>
+    <div class="prob"><span class="lbl">Problem</span><p>The model's knowledge ends at a certain point in time. Rules, figures and the state of research may have changed since, and the model does not always say so.</p></div>
+    <div class="sol"><span class="lbl">Solution</span><p>Check anything that describes how the world is now, such as rules, prices and current research, against an up-to-date source.</p></div>
+  </div>
+  <div class="pair">
+    <h3>Information you hand over</h3>
+    <div class="prob"><span class="lbl">Problem</span><p>What you type in may be stored, used for training or end up outside the EU. Students' texts, names and grades are personal data.</p></div>
+    <div class="sol"><span class="lbl">Solution</span><p>Find out what happens to the information before you enter it. Part 6 goes through how to reason.</p></div>
+  </div>
+  <div class="pair">
+    <h3>Environment and resources</h3>
+    <div class="prob"><span class="lbl">Problem</span><p>Training and running large models requires a lot of energy, and water for cooling data centres.</p></div>
+    <div class="sol"><span class="lbl">Solution</span><p>Use AI when it adds something, choose smaller models for simple tasks and include sustainability in the discussion with students.</p></div>
+  </div>
+
+  <div class="ex" data-type="choice">
+    <script type="application/json">{
+      "badge": "Knowledge check", "title": "Test your understanding",
+      "questions": [
+        {"q": "What does a language model do when it answers a question?", "options": [
+          {"t": "It looks the answer up in a database of verified facts."},
+          {"t": "It generates a likely continuation of the text, token by token.", "ok": true},
+          {"t": "It always searches the web and summarises what it finds."}
+        ], "explain": "A language model generates text from probabilities. Some tools can also search the web, but the basic mechanism is predicting the next token."},
+        {"q": "Why can the same question give different answers?", "options": [
+          {"t": "Because the choice of the next token involves an element of chance.", "ok": true},
+          {"t": "Because the model learns from each individual user in real time."},
+          {"t": "Because the answer is always fetched from different sources."}
+        ], "explain": "Randomness in token choice, and settings such as temperature, make answers vary."},
+        {"q": "A student submits a text with a reference that does not exist. What is the most likely explanation if AI was used?", "options": [
+          {"t": "The tool copied a reference from another student's work."},
+          {"t": "The model generated a plausible but invented reference.", "ok": true},
+          {"t": "The reference existed but has been removed from the internet."}
+        ], "explain": "Confabulated references are well known. Note that a false reference can also result from carelessness, and on its own it does not show that AI was used. This comes back in part 7."},
+        {"q": "Which statement about reasoning models is true?", "options": [
+          {"t": "The steps they show are always exactly what determined the answer."},
+          {"t": "They show step-by-step reasoning that is generated text and not necessarily what actually determined the answer.", "ok": true},
+          {"t": "They never make mistakes in mathematics."}
+        ], "explain": "The steps often help the model solve the task better, but they are not a guaranteed faithful account of the computation. This comes back in part 2."},
+        {"q": "What does it mean that an AI agent can carry out tasks itself?", "options": [
+          {"t": "It can only answer questions in a chat."},
+          {"t": "It can perform several steps, such as opening pages and filling in forms, without a person doing each step.", "ok": true},
+          {"t": "It is always connected to the university's own systems."}
+        ], "explain": "Agents can, for example, complete web-based quizzes and assignments. That is one reason why unsupervised quizzes do not work as a check of the student's own knowledge."},
+        {"q": "Why do language models tend to agree with the user?", "options": [
+          {"t": "Because they were trained to be helpful and rated by people who often prefer agreement.", "ok": true},
+          {"t": "Because they can access the user's earlier opinions in every service."},
+          {"t": "Because they lack information about the topic."}
+        ], "explain": "Fine-tuning with human ratings can reward agreement. Explicitly ask for counter-arguments."}
+      ]
+    }</script>
+  </div>
+
+  <h2>Try it yourself</h2>
+  <ul>
+    <li><strong>Challenge an AI in your own field.</strong> Ask increasingly specific questions about something you are an expert in. When do the answers start to go wrong, and can you tell from the wording?</li>
+    <li><strong>Ask for sources.</strong> Ask the tool for five scholarly sources on a question you know well. Check them.</li>
+    <li><strong>Ask the same question three times.</strong> Compare the answers. What differs, and what stays stable?</li>
+  </ul>
+  <div class="gate" data-kind="exit"><script type="application/json">{"q": "What is the most important thing you take with you from this part? Phrase it so that you can use it in the next part."}</script></div>
+</div>
+<section class="journey" aria-live="polite"></section>
+<nav class="pager" aria-label="Sidor / Pages"><a class="prev" href="index.html" data-internal rel="prev"><small><span class="l-sv">Föregående</span><span class="l-en">Previous</span></small><span class="l-sv">Start</span><span class="l-en">Start</span></a><a class="next" href="historia.html" data-internal rel="next"><small><span class="l-sv">Nästa</span><span class="l-en">Next</span></small><span class="l-sv">Från MYCIN till miljarder parametrar</span><span class="l-en">From MYCIN to billions of parameters</span></a></nav>
+</main>
+</div>
+<footer class="site"><div class="inner">
+<p><span class="l-sv">Educate, Jönköping University. Materialet är stöd och rekommendationer, inte policy eller ett JU-gemensamt beslut. Vad som gäller i en viss kurs och examination beslutar examinator.</span><span class="l-en">Educate, Jönköping University. The material is support and recommendations, not policy or a university-wide decision. What applies in a particular course and examination is decided by the examiner.</span></p>
+<p><span class="l-sv">Licens: CC BY-NC-SA 4.0. Delar bygger på material från Stanford Teaching Commons under samma licens.</span><span class="l-en">Licence: CC BY-NC-SA 4.0. Parts build on material from Stanford Teaching Commons under the same licence.</span></p>
+</div></footer>
+</body>
+</html>

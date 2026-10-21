@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="sv" data-lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-sv="Planera med ramverk | AI i utbildning" data-en="Planning with frameworks | AI in education">Planera med ramverk | AI i utbildning</title>
+<meta name="description" content="Konstruktiv länkning, SAMR, TPACK och Intelligent-TPACK. Planera ett eget moment.">
+<link rel="stylesheet" href="assets/style.css">
+<script>(function(){try{var q=new URLSearchParams(location.search).get('lang');var l=q||JSON.parse(localStorage.getItem('aiu:lang')||'"sv"');if(l==='en'){document.documentElement.lang='en';document.documentElement.dataset.lang='en';}}catch(e){}})();</script>
+<script src="assets/app.js" defer></script>
+</head>
+<body data-page="planera">
+<a class="skip" href="#main"><span class="l-sv">Hoppa till innehållet</span><span class="l-en">Skip to content</span></a>
+<header class="top">
+  <div class="top-inner">
+    <a class="brand" href="index.html" data-internal>
+      <span class="brand-mark" aria-hidden="true">JU</span>
+      <span class="brand-text"><strong><span class="l-sv">AI i utbildning</span><span class="l-en">AI in education</span></strong>
+      <span><span class="l-sv">En gemensam kunskapsram</span><span class="l-en">A shared knowledge base</span> · Jönköping University</span></span>
+    </a>
+    <div class="top-actions">
+      <button type="button" class="btn-top menu-btn" id="menuBtn" aria-controls="side" aria-expanded="false">Meny</button>
+      <button type="button" class="btn-top" id="langBtn" lang="en" aria-label="Switch to English">English</button>
+    </div>
+  </div>
+</header>
+<div class="layout">
+<nav class="side" id="side" aria-labelledby="navTitle"><h2 id="navTitle"><span class="l-sv">Innehåll</span><span class="l-en">Contents</span></h2><ol><li><a href="index.html" data-internal data-page="index"><span class="num" aria-hidden="true"></span><span><span class="l-sv">Start</span><span class="l-en">Start</span></span><span></span></a></li></ol><h2 class="group"><span class="l-sv">Delar</span><span class="l-en">Parts</span></h2><ol><li><a href="vad-ar-ai.html" data-internal data-page="vad-ar-ai"><span class="num" aria-hidden="true">1</span><span><span class="l-sv">Vad är AI?</span><span class="l-en">What is AI?</span></span><span class="done" role="img"></span></a></li><li><a href="historia.html" data-internal data-page="historia"><span class="num" aria-hidden="true">2</span><span><span class="l-sv">Historia och granskning</span><span class="l-en">History and inspection</span></span><span class="done" role="img"></span></a></li><li><a href="nar-ai-ar-battre.html" data-internal data-page="nar-ai-ar-battre"><span class="num" aria-hidden="true">3</span><span><span class="l-sv">När AI är bättre</span><span class="l-en">When AI is better</span></span><span class="done" role="img"></span></a></li><li><a href="ai-litteracitet.html" data-internal data-page="ai-litteracitet"><span class="num" aria-hidden="true">4</span><span><span class="l-sv">AI-litteracitet</span><span class="l-en">AI literacy</span></span><span class="done" role="img"></span></a></li><li><a href="ai-och-larande.html" data-internal data-page="ai-och-larande"><span class="num" aria-hidden="true">5</span><span><span class="l-sv">AI och lärande</span><span class="l-en">AI and learning</span></span><span class="done" role="img"></span></a></li><li><a href="lagar-och-etik.html" data-internal data-page="lagar-och-etik"><span class="num" aria-hidden="true">6</span><span><span class="l-sv">Lagar och etik</span><span class="l-en">Law and ethics</span></span><span class="done" role="img"></span></a></li><li><a href="rattssaker-examination.html" data-internal data-page="rattssaker-examination"><span class="num" aria-hidden="true">7</span><span><span class="l-sv">Rättssäker examination</span><span class="l-en">Legally secure examination</span></span><span class="done" role="img"></span></a></li><li><a href="lararens-arbete.html" data-internal data-page="lararens-arbete"><span class="num" aria-hidden="true">8</span><span><span class="l-sv">Lärarens arbete</span><span class="l-en">The teacher's work</span></span><span class="done" role="img"></span></a></li><li><a href="planera.html" data-internal data-page="planera" aria-current="page"><span class="num" aria-hidden="true">9</span><span><span class="l-sv">Planera med ramverk</span><span class="l-en">Planning with frameworks</span></span><span class="done" role="img"></span></a></li></ol><h2 class="group"><span class="l-sv">Stöd</span><span class="l-en">Support</span></h2><ol><li><a href="begrepp.html" data-internal data-page="begrepp"><span class="num" aria-hidden="true"></span><span><span class="l-sv">Begrepp</span><span class="l-en">Glossary</span></span><span></span></a></li><li><a href="kallor.html" data-internal data-page="kallor"><span class="num" aria-hidden="true"></span><span><span class="l-sv">Källor</span><span class="l-en">Sources</span></span><span></span></a></li><li><a href="certifikat.html" data-internal data-page="certifikat"><span class="num" aria-hidden="true"></span><span><span class="l-sv">Certifikat</span><span class="l-en">Certificate</span></span><span></span></a></li></ol></nav>
+<main id="main" tabindex="-1">
+<div class="l-sv" lang="sv">
+  <p class="crumbs">Del 9 av 9</p>
+  <h1>Planera med ramverk</h1>
+  <p class="lead">Ramverk hjälper dig att fatta genomtänkta beslut om AI i undervisningen. Konstruktiv länkning håller ihop lärandemål, aktiviteter och examination. SAMR hjälper dig att se vad tekniken förändrar. TPACK och Intelligent-TPACK beskriver vilken kunskap du behöver. I slutet planerar du ett eget moment.</p>
+  <div class="meta-row"><span>Cirka 3 timmar</span><span>1 kunskapstest</span><span>Planeringsverktyg</span></div>
+
+  <section class="goals" aria-labelledby="g9sv">
+    <h2 id="g9sv">Efter den här delen kan du</h2>
+    <ul>
+      <li>använda konstruktiv länkning för att planera lärandemål, läraktiviteter och examination där AI-litteracitet ingår</li>
+      <li>använda SAMR och TPACK på ett genomtänkt sätt, och känna till modellernas begränsningar</li>
+      <li>formulera välgrundade principer för när, hur och i vilka sammanhang AI bör användas i din undervisning</li>
+    </ul>
+  </section>
+  <div class="gate" data-kind="bridge"><script type="application/json">{"q": "Titta tillbaka på det du har tagit med dig från de tidigare delarna. Vilken insikt vill du låta styra din planering?", "prev": "lararens-arbete"}</script></div>
+
+
+  <h2>Konstruktiv länkning</h2>
+  <p>Konstruktiv länkning, utvecklad av John Biggs, innebär att lärandemål, läraktiviteter och examination hänger ihop. Studenterna lär sig det de gör, och examinationen ska pröva det lärandemålen anger. AI påverkar alla tre leden:</p>
+  <div class="grid">
+    <div class="card"><span class="tag p">Lärandemål</span><h3>Vad ska studenten kunna?</h3><p>Behöver lärandemålen uttrycka AI-litteracitet i ämnet? Vad måste studenten kunna utan AI för att kunna granska den?</p></div>
+    <div class="card"><span class="tag">Läraktiviteter</span><h3>Hur lär sig studenten det?</h3><p>Vilken roll ska AI ha i aktiviteterna, och hur säkerställer du att studenten själv gör det tankearbete som leder till lärande?</p></div>
+    <div class="card"><span class="tag y">Examination</span><h3>Hur visar studenten det?</h3><p>Ger examinationen underlag för att bedöma studentens eget kunnande när AI finns tillgänglig?</p></div>
+  </div>
+  <div class="pair">
+    <h3>När länkningen brister</h3>
+    <div class="prob"><span class="lbl">Problem</span><p>Lärandemålet är att självständigt analysera ett fall. Läraktiviteterna uppmuntrar AI-stöd i analysen, och examinationen är en hemuppgift utan regel om AI.</p></div>
+    <div class="sol"><span class="lbl">Lösning</span><p>Låt aktiviteterna öva analysen med AI som utmanare (I &gt; AI &gt; I), och komplettera hemuppgiften med ett kort muntligt moment där studenten analyserar ett nytt fall utan stöd.</p></div>
+  </div>
+  <h3>Lärandemål som uttrycker AI-litteracitet</h3>
+  <p>Exempel på formuleringar som kan anpassas till ditt ämne:</p>
+  <ul>
+    <li>kritiskt granska AI-genererade förslag inom [område] mot vetenskapliga källor och professionella riktlinjer</li>
+    <li>motivera när AI-stöd är lämpligt och olämpligt i [yrkessituation]</li>
+    <li>redogöra för hur skevheter i data kan påverka AI-baserade beslut inom [område]</li>
+    <li>självständigt utföra [kärnfärdighet] och värdera ett AI-genererat resultat av samma uppgift</li>
+  </ul>
+
+    <div class="gate" data-kind="pause"><script type="application/json">{"q": "Var brister länkningen mellan lärandemål, läraktiviteter och examination i en av dina kurser när AI finns tillgänglig?"}</script></div>
+  <h2>SAMR: vad förändrar tekniken?</h2>
+  <p>SAMR, utvecklad av Ruben Puentedura, beskriver fyra sätt som teknik kan förändra en uppgift:</p>
+  <div class="table-wrap">
+  <table>
+    <caption>SAMR med exempel på AI</caption>
+    <thead><tr><th scope="col">Nivå</th><th scope="col">Innebörd</th><th scope="col">Exempel med AI</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">Ersättning (Substitution)</th><td>Tekniken ersätter ett annat verktyg utan att uppgiften ändras.</td><td>AI används som stavningskontroll.</td></tr>
+      <tr><th scope="row">Förstärkning (Augmentation)</th><td>Tekniken ersätter ett verktyg och tillför en förbättring.</td><td>AI ger omedelbar återkoppling på struktur utifrån kursens kriterier.</td></tr>
+      <tr><th scope="row">Modifiering (Modification)</th><td>Tekniken gör det möjligt att utforma om uppgiften väsentligt.</td><td>Studenterna jämför sin egen analys med en AI-analys och värderar skillnaderna.</td></tr>
+      <tr><th scope="row">Omdefiniering (Redefinition)</th><td>Tekniken gör nya uppgifter möjliga som inte gick tidigare.</td><td>Studenter övar svåra samtal med en simulerad klient och analyserar dem i efterhand.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="box key">
+    <span class="box-title">Använd SAMR rätt</span>
+    <ul>
+      <li><strong>Det är inte en trappa.</strong> En högre nivå är inte bättre i sig. Ersättning kan vara helt rätt när syftet är att frigöra tid till annat.</li>
+      <li><strong>Utgå från lärandet, inte tekniken.</strong> Frågan är inte hur långt upp du kommer, utan om förändringen stödjer lärandemålet.</li>
+      <li><strong>Modellen har svagt empiriskt stöd.</strong> Den har kritiserats för att sakna forskningsgrund och för att ignorera sammanhanget. Använd den som ett samtalsstöd, inte som en norm.</li>
+    </ul>
+  </div>
+
+  <h2>TPACK: vilken kunskap behöver du?</h2>
+  <p>TPACK, utvecklad av Punya Mishra och Matthew Koehler, beskriver den kunskap lärare behöver för att använda teknik väl. Den kombinerar tre kunskapsområden: teknisk kunskap, pedagogisk kunskap och ämneskunskap. Det intressanta finns i överlappen: hur tekniken förändrar ämnet, hur den förändrar undervisningen, och hur allt tre samspelar i ett konkret sammanhang.</p>
+
+  <h3>Intelligent-TPACK: TPACK för AI</h3>
+  <p>Ismail Celik vid Uleåborgs universitet har byggt ut TPACK för AI och lagt till en femte komponent: <strong>etisk bedömning</strong>. Läraren behöver kunna förstå, motivera och värdera resultat från AI-verktyg med avseende på fyra aspekter:</p>
+  <div class="grid">
+    <div class="card"><h4>Transparens</h4><p>Hur kommer verktyget fram till sina resultat, och vad vet vi om det?</p></div>
+    <div class="card"><h4>Rättvisa</h4><p>Kan verktyget missgynna vissa studenter på grund av skevheter i data?</p></div>
+    <div class="card"><h4>Ansvar</h4><p>Vem ansvarar för verktyget och för de beslut det påverkar?</p></div>
+    <div class="card"><h4>Inkludering</h4><p>Är verktyget tillgängligt och användbart för alla studenter?</p></div>
+  </div>
+  <p>Celiks studie med lärare visade tre saker som är viktiga när du planerar din egen utveckling:</p>
+  <ul>
+    <li><strong>Teknisk kunskap hjälper den etiska bedömningen.</strong> Den som förstår hur AI fungerar kan bättre värdera dess resultat. Det är skälet till del 1 och 2 i det här materialet.</li>
+    <li><strong>Teknisk kunskap räcker inte.</strong> Den blir användbar först när den kombineras med pedagogisk kunskap.</li>
+    <li><strong>Ämnesspecifika verktyg stärker kopplingen till ämnet.</strong> Att möta AI-verktyg i det egna ämnet utvecklar förståelsen för hur tekniken förändrar ämnet.</li>
+  </ul>
+  <p>Celik beskriver lärarens roll som en dirigent i AI-stödd undervisning, och den rollen kräver teknisk, pedagogisk och etisk kunskap samtidigt.</p>
+
+  <div class="ex" data-type="choice">
+    <script type="application/json">{
+      "badge": "Kunskapstest", "title": "Ramverken i praktiken",
+      "questions": [
+        {"q": "Studenterna jämför sin egen sammanfattning med en AI-sammanfattning och diskuterar vad som skiljer. Vilken SAMR-nivå ligger närmast?", "options": [
+          {"t": "Ersättning"},
+          {"t": "Modifiering", "ok": true},
+          {"t": "Omdefiniering"}
+        ], "explain": "Uppgiften har utformats om väsentligt, men det är fortfarande en sammanfattningsuppgift. Viktigare än nivån är om förändringen stödjer lärandemålet."},
+        {"q": "Vilket påstående om SAMR stämmer?", "options": [
+          {"t": "Målet är alltid att nå omdefiniering."},
+          {"t": "En lägre nivå kan vara rätt, beroende på syftet.", "ok": true},
+          {"t": "Modellen har starkt empiriskt stöd."}
+        ], "explain": "SAMR är inte en trappa, och modellen har kritiserats för svag forskningsgrund. Använd den som samtalsstöd."},
+        {"q": "Vad lägger Intelligent-TPACK till jämfört med TPACK?", "options": [
+          {"t": "Kunskap om programmering."},
+          {"t": "Etisk bedömning av AI-verktyg: transparens, rättvisa, ansvar och inkludering.", "ok": true},
+          {"t": "Kunskap om lärplattformar."}
+        ], "explain": "Celik lade till etisk bedömning som en egen kunskapskomponent."},
+        {"q": "Vad visade Celiks studie om teknisk kunskap?", "options": [
+          {"t": "Att den räcker för att använda AI väl i undervisningen."},
+          {"t": "Att den hjälper den etiska bedömningen men behöver kombineras med pedagogisk kunskap.", "ok": true},
+          {"t": "Att den saknar betydelse."}
+        ], "explain": "Teknisk kunskap är nödvändig men inte tillräcklig."},
+        {"q": "Lärandemålet är att självständigt formulera en argumentation. Vilken examination är bäst länkad?", "options": [
+          {"t": "En hemuppgift där AI får användas fritt och ingen annan kontroll finns."},
+          {"t": "En hemuppgift där AI får användas i förarbetet, följd av ett kort muntligt moment där studenten argumenterar kring en ny fråga.", "ok": true},
+          {"t": "En flervalstentamen om argumentationsteori."}
+        ], "explain": "Det öppna momentet stödjer lärandet, och det säkrade momentet prövar lärandemålet direkt."}
+      ]
+    }</script>
+  </div>
+
+    <div class="gate" data-kind="pause"><script type="application/json">{"q": "Vilken kunskap enligt Intelligent-TPACK behöver du själv utveckla mest, och hur?"}</script></div>
+  <h2>Formulera dina principer</h2>
+  <p>Innan du planerar, formulera några principer för din egen undervisning. De hjälper dig att fatta konsekventa beslut och att förklara dem för studenterna. Exempel:</p>
+  <ul>
+    <li>Det studenterna ska kunna granska, ska de också kunna göra själva.</li>
+    <li>AI får användas där den stödjer lärandet, och jag förklarar varför.</li>
+    <li>Varje centralt lärandemål prövas någonstans under former som visar studentens eget kunnande.</li>
+    <li>Jag är öppen med när och hur jag själv använder AI.</li>
+  </ul>
+
+  <div class="ex" data-type="planner">
+    <script type="application/json">{
+      "id": "plan", "badge": "Planera", "title": "Planera ett moment med AI",
+      "intro": "Fyll i fälten för ett moment i en av dina kurser. Sammanställningen uppdateras medan du skriver och sparas bara i din webbläsare. Kopiera eller skriv ut den när du är klar.",
+      "fields": [
+        {"label": "Lärandemål", "long": true, "hint": "Vad ska studenten kunna efter momentet?"},
+        {"label": "Läraktivitet", "long": true},
+        {"label": "Vilken roll får AI ha?", "options": ["Ingen AI", "AI i förarbetet, till exempel idéer och planering", "AI som stöd under arbetet, med angivna gränser", "AI får användas i hela arbetet", "AI är själva syftet med uppgiften"]},
+        {"label": "Hur visar studenten sitt eget kunnande?", "long": true, "hint": "Vad i examinationen ger underlag för att bedöma det studenten själv kan?"},
+        {"label": "Säkrat moment", "options": ["Ingen", "Muntligt samtal", "Övervakat moment", "Dokumenterad process med utkast", "Koppling till kursens eget material eller egna data"]},
+        {"label": "I > AI > I: vad gör studenten själv först och sist?", "long": true},
+        {"label": "Vad tillför AI, och vilka etiska aspekter behöver hanteras?", "long": true, "hint": "Tänk på SAMR och Intelligent-TPACK: transparens, rättvisa, ansvar och inkludering."}
+      ]
+    }</script>
+  </div>
+
+  <h2>Avslutning</h2>
+  <p>Du har nu gått igenom hela kunskapsramen. Gå gärna tillbaka till självskattningen på startsidan och jämför med hur du skattade dig i början. Använd planeringen i ditt fortsatta arbete och i samtal med kollegor.</p>
+  <div class="gate" data-kind="exit"><script type="application/json">{"q": "Vad är det viktigaste du tar med dig från hela kunskapsramen, och vad ska du göra annorlunda härnäst?"}</script></div>
+</div>
+
+<div class="l-en" lang="en">
+  <p class="crumbs">Part 9 of 9</p>
+  <h1>Planning with frameworks</h1>
+  <p class="lead">Frameworks help you make well-considered decisions about AI in teaching. Constructive alignment ties together learning outcomes, activities and examination. SAMR helps you see what technology changes. TPACK and Intelligent-TPACK describe the knowledge you need. At the end, you plan a session of your own.</p>
+  <div class="meta-row"><span>About 3 hours</span><span>1 knowledge check</span><span>Planning tool</span></div>
+
+  <section class="goals" aria-labelledby="g9en">
+    <h2 id="g9en">After this part you can</h2>
+    <ul>
+      <li>use constructive alignment to plan learning outcomes, activities and examination that include AI literacy</li>
+      <li>use SAMR and TPACK thoughtfully, and know the limitations of the models</li>
+      <li>formulate well-founded principles for when, how and in what contexts AI should be used in your teaching</li>
+    </ul>
+  </section>
+  <div class="gate" data-kind="bridge"><script type="application/json">{"q": "Look back at what you have taken with you from the earlier parts. Which insight do you want to guide your planning?", "prev": "lararens-arbete"}</script></div>
+
+
+  <h2>Constructive alignment</h2>
+  <p>Constructive alignment, developed by John Biggs, means that learning outcomes, learning activities and examination fit together. Students learn what they do, and the examination should test what the learning outcomes state. AI affects all three:</p>
+  <div class="grid">
+    <div class="card"><span class="tag p">Learning outcomes</span><h3>What should the student be able to do?</h3><p>Do the learning outcomes need to express AI literacy in the subject? What must the student be able to do without AI in order to review it?</p></div>
+    <div class="card"><span class="tag">Learning activities</span><h3>How does the student learn it?</h3><p>What role should AI play in the activities, and how do you ensure the student does the thinking that leads to learning?</p></div>
+    <div class="card"><span class="tag y">Examination</span><h3>How does the student show it?</h3><p>Does the examination provide evidence of the student's own knowledge when AI is available?</p></div>
+  </div>
+  <div class="pair">
+    <h3>When alignment breaks</h3>
+    <div class="prob"><span class="lbl">Problem</span><p>The learning outcome is to analyse a case independently. The activities encourage AI support in the analysis, and the examination is a take-home task with no rule on AI.</p></div>
+    <div class="sol"><span class="lbl">Solution</span><p>Let the activities practise analysis with AI as a challenger (I &gt; AI &gt; I), and add a short oral part to the take-home task where the student analyses a new case without support.</p></div>
+  </div>
+  <h3>Learning outcomes that express AI literacy</h3>
+  <p>Examples of wording you can adapt to your subject:</p>
+  <ul>
+    <li>critically review AI-generated suggestions in [field] against scholarly sources and professional guidelines</li>
+    <li>justify when AI support is appropriate and inappropriate in [professional situation]</li>
+    <li>account for how bias in data can affect AI-based decisions in [field]</li>
+    <li>independently perform [core skill] and evaluate an AI-generated result of the same task</li>
+  </ul>
+
+    <div class="gate" data-kind="pause"><script type="application/json">{"q": "Where does the alignment between learning outcomes, activities and examination break down in one of your courses when AI is available?"}</script></div>
+  <h2>SAMR: what does the technology change?</h2>
+  <p>SAMR, developed by Ruben Puentedura, describes four ways technology can change a task:</p>
+  <div class="table-wrap">
+  <table>
+    <caption>SAMR with AI examples</caption>
+    <thead><tr><th scope="col">Level</th><th scope="col">Meaning</th><th scope="col">Example with AI</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">Substitution</th><td>The technology replaces another tool without changing the task.</td><td>AI is used as a spell-checker.</td></tr>
+      <tr><th scope="row">Augmentation</th><td>The technology replaces a tool and adds an improvement.</td><td>AI gives immediate feedback on structure based on the course criteria.</td></tr>
+      <tr><th scope="row">Modification</th><td>The technology allows significant redesign of the task.</td><td>Students compare their own analysis with an AI analysis and evaluate the differences.</td></tr>
+      <tr><th scope="row">Redefinition</th><td>The technology makes new tasks possible that were not possible before.</td><td>Students practise difficult conversations with a simulated client and analyse them afterwards.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="box key">
+    <span class="box-title">Use SAMR well</span>
+    <ul>
+      <li><strong>It is not a ladder.</strong> A higher level is not better in itself. Substitution can be exactly right when the purpose is to free time for something else.</li>
+      <li><strong>Start from learning, not technology.</strong> The question is not how high you get, but whether the change supports the learning outcome.</li>
+      <li><strong>The model has weak empirical support.</strong> It has been criticised for lacking a research base and ignoring context. Use it to support conversation, not as a norm.</li>
+    </ul>
+  </div>
+
+  <h2>TPACK: what knowledge do you need?</h2>
+  <p>TPACK, developed by Punya Mishra and Matthew Koehler, describes the knowledge teachers need to use technology well. It combines three areas: technological knowledge, pedagogical knowledge and content knowledge. The interesting part is in the overlaps: how technology changes the subject, how it changes teaching, and how all three interact in a concrete context.</p>
+
+  <h3>Intelligent-TPACK: TPACK for AI</h3>
+  <p>Ismail Celik at the University of Oulu has extended TPACK for AI and added a fifth component: <strong>ethical assessment</strong>. Teachers need to be able to understand, justify and evaluate results from AI tools with regard to four aspects:</p>
+  <div class="grid">
+    <div class="card"><h4>Transparency</h4><p>How does the tool reach its results, and what do we know about it?</p></div>
+    <div class="card"><h4>Fairness</h4><p>Could the tool disadvantage some students because of bias in data?</p></div>
+    <div class="card"><h4>Accountability</h4><p>Who is responsible for the tool and for the decisions it influences?</p></div>
+    <div class="card"><h4>Inclusiveness</h4><p>Is the tool accessible and usable for all students?</p></div>
+  </div>
+  <p>Celik's study with teachers showed three things that matter when you plan your own development:</p>
+  <ul>
+    <li><strong>Technological knowledge helps ethical assessment.</strong> Those who understand how AI works are better able to evaluate its results. That is the reason for parts 1 and 2 of this material.</li>
+    <li><strong>Technological knowledge is not enough.</strong> It becomes useful only when combined with pedagogical knowledge.</li>
+    <li><strong>Subject-specific tools strengthen the link to the subject.</strong> Meeting AI tools in your own subject develops understanding of how technology changes the subject.</li>
+  </ul>
+  <p>Celik describes the teacher's role in AI-supported teaching as that of an orchestrator, and that role requires technological, pedagogical and ethical knowledge at the same time.</p>
+
+  <div class="ex" data-type="choice">
+    <script type="application/json">{
+      "badge": "Knowledge check", "title": "The frameworks in practice",
+      "questions": [
+        {"q": "Students compare their own summary with an AI summary and discuss the differences. Which SAMR level is closest?", "options": [
+          {"t": "Substitution"},
+          {"t": "Modification", "ok": true},
+          {"t": "Redefinition"}
+        ], "explain": "The task has been significantly redesigned, but it is still a summarising task. More important than the level is whether the change supports the learning outcome."},
+        {"q": "Which statement about SAMR is true?", "options": [
+          {"t": "The goal is always to reach redefinition."},
+          {"t": "A lower level can be right, depending on the purpose.", "ok": true},
+          {"t": "The model has strong empirical support."}
+        ], "explain": "SAMR is not a ladder, and the model has been criticised for a weak research base. Use it to support conversation."},
+        {"q": "What does Intelligent-TPACK add compared with TPACK?", "options": [
+          {"t": "Programming knowledge."},
+          {"t": "Ethical assessment of AI tools: transparency, fairness, accountability and inclusiveness.", "ok": true},
+          {"t": "Knowledge of learning platforms."}
+        ], "explain": "Celik added ethical assessment as a knowledge component of its own."},
+        {"q": "What did Celik's study show about technological knowledge?", "options": [
+          {"t": "That it is enough to use AI well in teaching."},
+          {"t": "That it helps ethical assessment but needs to be combined with pedagogical knowledge.", "ok": true},
+          {"t": "That it does not matter."}
+        ], "explain": "Technological knowledge is necessary but not sufficient."},
+        {"q": "The learning outcome is to formulate an argument independently. Which examination is best aligned?", "options": [
+          {"t": "A take-home task where AI may be used freely and there is no other check."},
+          {"t": "A take-home task where AI may be used in the preparation, followed by a short oral part where the student argues on a new question.", "ok": true},
+          {"t": "A multiple-choice exam on argumentation theory."}
+        ], "explain": "The open part supports learning, and the secured part tests the learning outcome directly."}
+      ]
+    }</script>
+  </div>
+
+    <div class="gate" data-kind="pause"><script type="application/json">{"q": "Which knowledge according to Intelligent-TPACK do you most need to develop yourself, and how?"}</script></div>
+  <h2>Formulate your principles</h2>
+  <p>Before planning, formulate a few principles for your own teaching. They help you make consistent decisions and explain them to students. Examples:</p>
+  <ul>
+    <li>What students should be able to review, they should also be able to do themselves.</li>
+    <li>AI may be used where it supports learning, and I explain why.</li>
+    <li>Every key learning outcome is tested somewhere under conditions that show the student's own knowledge.</li>
+    <li>I am open about when and how I use AI myself.</li>
+  </ul>
+
+  <div class="ex" data-type="planner">
+    <script type="application/json">{
+      "id": "plan", "badge": "Plan", "title": "Plan a session with AI",
+      "intro": "Fill in the fields for a session in one of your courses. The summary updates as you type and is saved only in your browser. Copy or print it when you are done.",
+      "fields": [
+        {"label": "Learning outcome", "long": true, "hint": "What should the student be able to do after the session?"},
+        {"label": "Learning activity", "long": true},
+        {"label": "What role may AI play?", "options": ["No AI", "AI in the preparation, such as ideas and planning", "AI as support during the work, within stated limits", "AI may be used throughout the work", "AI is the purpose of the task"]},
+        {"label": "How does the student show their own knowledge?", "long": true, "hint": "What in the examination provides evidence of what the student can do themselves?"},
+        {"label": "Secured part", "options": ["None", "Oral conversation", "Supervised part", "Documented process with drafts", "Link to the course's own material or own data"]},
+        {"label": "I > AI > I: what does the student do first and last?", "long": true},
+        {"label": "What does AI add, and which ethical aspects need handling?", "long": true, "hint": "Think of SAMR and Intelligent-TPACK: transparency, fairness, accountability and inclusiveness."}
+      ]
+    }</script>
+  </div>
+
+  <h2>Closing</h2>
+  <p>You have now worked through the whole knowledge base. Go back to the self-assessment on the start page and compare with how you rated yourself at the beginning. Use the plan in your continued work and in conversations with colleagues.</p>
+  <div class="gate" data-kind="exit"><script type="application/json">{"q": "What is the most important thing you take with you from the whole knowledge base, and what will you do differently next?"}</script></div>
+</div>
+<section class="journey" aria-live="polite"></section>
+<nav class="pager" aria-label="Sidor / Pages"><a class="prev" href="lararens-arbete.html" data-internal rel="prev"><small><span class="l-sv">Föregående</span><span class="l-en">Previous</span></small><span class="l-sv">AI i lärarens arbete</span><span class="l-en">AI in the teacher's work</span></a><a class="next" href="begrepp.html" data-internal rel="next"><small><span class="l-sv">Nästa</span><span class="l-en">Next</span></small><span class="l-sv">Begrepp</span><span class="l-en">Glossary</span></a></nav>
+</main>
+</div>
+<footer class="site"><div class="inner">
+<p><span class="l-sv">Educate, Jönköping University. Materialet är stöd och rekommendationer, inte policy eller ett JU-gemensamt beslut. Vad som gäller i en viss kurs och examination beslutar examinator.</span><span class="l-en">Educate, Jönköping University. The material is support and recommendations, not policy or a university-wide decision. What applies in a particular course and examination is decided by the examiner.</span></p>
+<p><span class="l-sv">Licens: CC BY-NC-SA 4.0. Delar bygger på material från Stanford Teaching Commons under samma licens.</span><span class="l-en">Licence: CC BY-NC-SA 4.0. Parts build on material from Stanford Teaching Commons under the same licence.</span></p>
+</div></footer>
+</body>
+</html>

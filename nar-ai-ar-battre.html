@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="sv" data-lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-sv="När AI är bättre än människan | AI i utbildning" data-en="When AI outperforms humans | AI in education">När AI är bättre än människan | AI i utbildning</title>
+<meta name="description" content="Automationsbias, kompetensförlust och andra fällor i samspelet mellan människa och AI, med exempel och lösningar.">
+<link rel="stylesheet" href="assets/style.css">
+<script>(function(){try{var q=new URLSearchParams(location.search).get('lang');var l=q||JSON.parse(localStorage.getItem('aiu:lang')||'"sv"');if(l==='en'){document.documentElement.lang='en';document.documentElement.dataset.lang='en';}}catch(e){}})();</script>
+<script src="assets/app.js" defer></script>
+</head>
+<body data-page="nar-ai-ar-battre">
+<a class="skip" href="#main"><span class="l-sv">Hoppa till innehållet</span><span class="l-en">Skip to content</span></a>
+<header class="top">
+  <div class="top-inner">
+    <a class="brand" href="index.html" data-internal>
+      <span class="brand-mark" aria-hidden="true">JU</span>
+      <span class="brand-text"><strong><span class="l-sv">AI i utbildning</span><span class="l-en">AI in education</span></strong>
+      <span><span class="l-sv">En gemensam kunskapsram</span><span class="l-en">A shared knowledge base</span> · Jönköping University</span></span>
+    </a>
+    <div class="top-actions">
+      <button type="button" class="btn-top menu-btn" id="menuBtn" aria-controls="side" aria-expanded="false">Meny</button>
+      <button type="button" class="btn-top" id="langBtn" lang="en" aria-label="Switch to English">English</button>
+    </div>
+  </div>
+</header>
+<div class="layout">
+<nav class="side" id="side" aria-labelledby="navTitle"><h2 id="navTitle"><span class="l-sv">Innehåll</span><span class="l-en">Contents</span></h2><ol><li><a href="index.html" data-internal data-page="index"><span class="num" aria-hidden="true"></span><span><span class="l-sv">Start</span><span class="l-en">Start</span></span><span></span></a></li></ol><h2 class="group"><span class="l-sv">Delar</span><span class="l-en">Parts</span></h2><ol><li><a href="vad-ar-ai.html" data-internal data-page="vad-ar-ai"><span class="num" aria-hidden="true">1</span><span><span class="l-sv">Vad är AI?</span><span class="l-en">What is AI?</span></span><span class="done" role="img"></span></a></li><li><a href="historia.html" data-internal data-page="historia"><span class="num" aria-hidden="true">2</span><span><span class="l-sv">Historia och granskning</span><span class="l-en">History and inspection</span></span><span class="done" role="img"></span></a></li><li><a href="nar-ai-ar-battre.html" data-internal data-page="nar-ai-ar-battre" aria-current="page"><span class="num" aria-hidden="true">3</span><span><span class="l-sv">När AI är bättre</span><span class="l-en">When AI is better</span></span><span class="done" role="img"></span></a></li><li><a href="ai-litteracitet.html" data-internal data-page="ai-litteracitet"><span class="num" aria-hidden="true">4</span><span><span class="l-sv">AI-litteracitet</span><span class="l-en">AI literacy</span></span><span class="done" role="img"></span></a></li><li><a href="ai-och-larande.html" data-internal data-page="ai-och-larande"><span class="num" aria-hidden="true">5</span><span><span class="l-sv">AI och lärande</span><span class="l-en">AI and learning</span></span><span class="done" role="img"></span></a></li><li><a href="lagar-och-etik.html" data-internal data-page="lagar-och-etik"><span class="num" aria-hidden="true">6</span><span><span class="l-sv">Lagar och etik</span><span class="l-en">Law and ethics</span></span><span class="done" role="img"></span></a></li><li><a href="rattssaker-examination.html" data-internal data-page="rattssaker-examination"><span class="num" aria-hidden="true">7</span><span><span class="l-sv">Rättssäker examination</span><span class="l-en">Legally secure examination</span></span><span class="done" role="img"></span></a></li><li><a href="lararens-arbete.html" data-internal data-page="lararens-arbete"><span class="num" aria-hidden="true">8</span><span><span class="l-sv">Lärarens arbete</span><span class="l-en">The teacher's work</span></span><span class="done" role="img"></span></a></li><li><a href="planera.html" data-internal data-page="planera"><span class="num" aria-hidden="true">9</span><span><span class="l-sv">Planera med ramverk</span><span class="l-en">Planning with frameworks</span></span><span class="done" role="img"></span></a></li></ol><h2 class="group"><span class="l-sv">Stöd</span><span class="l-en">Support</span></h2><ol><li><a href="begrepp.html" data-internal data-page="begrepp"><span class="num" aria-hidden="true"></span><span><span class="l-sv">Begrepp</span><span class="l-en">Glossary</span></span><span></span></a></li><li><a href="kallor.html" data-internal data-page="kallor"><span class="num" aria-hidden="true"></span><span><span class="l-sv">Källor</span><span class="l-en">Sources</span></span><span></span></a></li><li><a href="certifikat.html" data-internal data-page="certifikat"><span class="num" aria-hidden="true"></span><span><span class="l-sv">Certifikat</span><span class="l-en">Certificate</span></span><span></span></a></li></ol></nav>
+<main id="main" tabindex="-1">
+<div class="l-sv" lang="sv">
+  <p class="crumbs">Del 3 av 9</p>
+  <h1>När AI är bättre än människan</h1>
+  <p class="lead">Det låter tryggt att en människa alltid har sista ordet. Men när ett system oftast har rätt förändras människans roll: vi slutar granska, vi tappar färdigheter och vi tar på oss ansvaret för fel vi inte längre har förutsättningar att upptäcka. Den här delen går igenom fällorna och vad som faktiskt hjälper.</p>
+  <div class="meta-row"><span>Cirka 3 timmar</span><span>10 fall med problem och lösning</span><span>3 övningar</span></div>
+
+  <section class="goals" aria-labelledby="g3sv">
+    <h2 id="g3sv">Efter den här delen kan du</h2>
+    <ul>
+      <li>förklara automationsbias, kompetensförlust och andra problem som uppstår när AI presterar bättre än människan</li>
+      <li>ge konkreta exempel på hur problemen har visat sig i vård, förvaltning, rättsväsende och utbildning</li>
+      <li>föreslå åtgärder som minskar riskerna, i din egen undervisning och i studenternas lärande</li>
+    </ul>
+  </section>
+  <div class="gate" data-kind="bridge"><script type="application/json">{"q": "I förra delen kom vi fram till att vi måste granska resultat och användning i stället för modellen. Vad tror du händer med den granskningen när systemet nästan alltid har rätt?", "prev": "historia"}</script></div>
+
+
+  <h2>Automatiseringens ironi</h2>
+  <p>Redan 1983 beskrev psykologen Lisanne Bainbridge det hon kallade automatiseringens ironier. När ett system tar över de enkla delarna av ett arbete blir människan kvar med två uppgifter som hon är dålig på: att övervaka ett system som nästan alltid fungerar, och att ta över när det plötsligt inte gör det. Ju bättre systemet är, desto mer sällan behöver människan ingripa, och desto sämre förberedd är hon när det händer.</p>
+  <p>Det är därför formuleringen ”en människa fattar alltid beslutet” inte räcker. Frågan är om människan har förutsättningar att fatta ett eget beslut, eller bara bekräftar systemets.</p>
+
+  <h2>Sju fällor</h2>
+  <div class="grid">
+    <div class="card"><span class="tag">Fälla 1</span><h3>Automationsbias</h3><p>Tendensen att låta automatiska förslag väga för tungt. Den ger två sorters fel: att följa ett felaktigt förslag, och att missa något som systemet inte flaggade för.</p></div>
+    <div class="card"><span class="tag">Fälla 2</span><h3>Minskad vaksamhet</h3><p>När ett system brukar ha rätt slutar vi kontrollera. Granskningen blir en formalitet.</p></div>
+    <div class="card"><span class="tag">Fälla 3</span><h3>Kompetensförlust</h3><p>Färdigheter som inte övas försvagas. Den som alltid arbetar med stöd kan bli sämre utan det.</p></div>
+    <div class="card"><span class="tag">Fälla 4</span><h3>Utanför kretsen</h3><p>Den som inte har varit delaktig i processen saknar överblick när hon plötsligt måste ta över eller förklara.</p></div>
+    <div class="card"><span class="tag">Fälla 5</span><h3>Ansvarsförskjutning</h3><p>Människan blir ansvarig för systemets fel utan att ha haft möjlighet att upptäcka dem. ”Människa i loopen” blir ett alibi.</p></div>
+    <div class="card"><span class="tag">Fälla 6</span><h3>Förmänskligande</h3><p>Vi tillskriver systemet förståelse, omdöme och auktoritet, särskilt när det formulerar sig säkert och vänligt. Det kallas ELIZA-effekten.</p></div>
+    <div class="card"><span class="tag">Fälla 7</span><h3>Undertro</h3><p>Det omvända: efter att ha sett ett enda fel avfärdar vi ett system som i genomsnitt är bättre än vi. Både över- och undertro leder till sämre beslut.</p></div>
+  </div>
+
+    <div class="gate" data-kind="pause"><script type="application/json">{"q": "Tänk på din egen vardag: när litade du senast på ett automatiskt förslag utan att kontrollera det? Vad fick dig att göra det?"}</script></div>
+  <h2>Fall: problem och lösningar</h2>
+  <p>Fallen nedan kommer i första hand från Sverige och Europa. De är valda för att visa mönster som också finns i utbildningen.</p>
+
+  <div class="pair">
+    <h3>Mammografi: när AI har fel får vi också fel</h3>
+    <div class="prob"><span class="lbl">Problem</span><p>I en studie från Tyskland och Nederländerna bedömde 27 radiologer mammografibilder med förslag från ett påstått AI-system. I 12 av 40 fall var förslaget avsiktligt fel. När förslaget var fel sjönk andelen rätta bedömningar kraftigt: från omkring 80 till 20 procent för de minst erfarna, och från 82 till 45,5 procent för de mest erfarna.</p></div>
+    <div class="sol"><span class="lbl">Lösning</span><p>Gör den egna bedömningen innan AI-förslaget visas. Mät hur ofta människa och system är oense, och följ upp de fallen. Erfarenhet skyddar delvis, men inte helt.</p></div>
+    <p class="src">Dratsch m.fl. (2023), Radiology.</p>
+  </div>
+
+  <div class="pair">
+    <h3>Koloskopi: sämre utan AI efter att ha vant sig vid den</h3>
+    <div class="prob"><span class="lbl">Problem</span><p>Vid fyra centrum i Polen undersöktes hur ofta erfarna endoskopister hittade förstadier till tarmcancer utan AI-stöd, före och efter att AI-stöd hade införts. Andelen sjönk från 28,4 till 22,4 procent. Läkarna hade blivit sämre på uppgiften när de gjorde den på egen hand.</p></div>
+    <div class="sol"><span class="lbl">Lösning</span><p>Planera in regelbunden övning utan stöd och följ upp resultat både med och utan AI. Det gäller särskilt för den som är ny i yrket och aldrig har byggt upp färdigheten utan stöd.</p></div>
+    <p class="src">Budzyń m.fl. (2025), The Lancet Gastroenterology &amp; Hepatology.</p>
+  </div>
+
+  <div class="pair">
+    <h3>Flyg: när automatiken släpper</h3>
+    <div class="prob"><span class="lbl">Problem</span><p>År 2009 frös hastighetsmätarna på ett Air France-plan över Atlanten. Autopiloten kopplade ur och piloterna fick plötsligt flyga för hand i ett läge de sällan hade övat. De uppfattade inte att planet hade tappat lyftkraft, och alla 228 ombord omkom. Den franska haverikommissionen pekade bland annat på bristande träning i manuell flygning och i att hantera oväntade situationer.</p></div>
+    <div class="sol"><span class="lbl">Lösning</span><p>Träna det som ska göras när systemet inte fungerar, inte bara det som görs med systemet. Öva överraskningar och övertagande.</p></div>
+    <p class="src">Franska haverikommissionen (BEA) (2012), slutrapport om flygning AF 447.</p>
+  </div>
+
+  <div class="pair">
+    <h3>Skolplacering i Göteborg: ett fel som ingen kunde se</h3>
+    <div class="prob"><span class="lbl">Problem</span><p>År 2020 placerades omkring 12 000 barn i skolor med hjälp av en algoritm. Den mätte avståndet fågelvägen i stället för gångvägen, och många barn fick orimligt långa skolvägar. Nästan 1 000 vårdnadshavare överklagade. Domstolen kunde inte se det systematiska felet, och en enskild förälder hade ingen möjlighet att granska algoritmen.</p></div>
+    <div class="sol"><span class="lbl">Lösning</span><p>Pröva systemets resultat mot verkligheten innan det används, dokumentera hur det fungerar, granska avvikande fall manuellt och se till att det finns en väg att få beslut omprövade.</p></div>
+    <p class="src">Göteborgs universitet (2023), om forskning av Charlotta Kronblad.</p>
+  </div>
+
+  <div class="pair">
+    <h3>Barnbidragsaffären i Nederländerna: människa i loopen som inte granskade</h3>
+    <div class="prob"><span class="lbl">Problem</span><p>Den nederländska skattemyndigheten använde en riskmodell för att välja ut ansökningar om barnomsorgsbidrag för kontroll. Nationalitet användes som en av riskfaktorerna. Tusentals familjer anklagades felaktigt för bidragsfusk och krävdes på stora belopp. Regeringen avgick 2021, och dataskyddsmyndigheten bötfällde skattemyndigheten för diskriminerande behandling av personuppgifter.</p></div>
+    <div class="sol"><span class="lbl">Lösning</span><p>Mänsklig granskning måste vara verklig: handläggaren behöver tid, underlag och mandat att gå emot systemet. Variabler som leder till diskriminering ska inte användas, och den som berörs ska kunna få veta varför.</p></div>
+    <p class="src">NOS (2021); nederländska parlamentets utredning Ongekend onrecht (2020).</p>
+  </div>
+
+  <div class="pair">
+    <h3>Riskprofiler i Sverige: granskning i efterhand</h3>
+    <div class="prob"><span class="lbl">Problem</span><p>Försäkringskassan använde en riskprofil byggd med maskininlärning för att välja ut ärenden om tillfällig föräldrapenning för kontroll. Integritetsskyddsmyndigheten inledde tillsyn 2025. Försäkringskassan uppgav då att profilen redan hade tagits ur bruk, och tillsynen avslutades.</p></div>
+    <div class="sol"><span class="lbl">Lösning</span><p>Gör konsekvensbedömningen innan systemet används, inte efter. Var öppen med att automatiserat urval förekommer och på vilka grunder.</p></div>
+    <p class="src">Integritetsskyddsmyndigheten (2025), beslut IMY-2025-11828.</p>
+  </div>
+
+  <div class="pair">
+    <h3>Domstolar i England: rättsfall som inte finns</h3>
+    <div class="prob"><span class="lbl">Problem</span><p>År 2025 prövade High Court i London två mål där advokater hade lämnat in hänvisningar till rättsfall som inte fanns. I det ena målet var 18 av 45 hänvisningar påhittade. Domstolen konstaterade att generativ AI inte kan utföra tillförlitlig juridisk research.</p></div>
+    <div class="sol"><span class="lbl">Lösning</span><p>Den som lämnar in ansvarar för innehållet. Kontrollera varje hänvisning mot en auktoritativ källa. Samma princip gäller studenter och lärare.</p></div>
+    <p class="src">High Court of England and Wales (2025), Ayinde mot Haringey och Al-Haroun mot Qatar National Bank.</p>
+  </div>
+
+  <div class="pair">
+    <h3>Modellen kan svaret, användaren får inte fram det</h3>
+    <div class="prob"><span class="lbl">Problem</span><p>I en studie från Oxford fick 1 298 personer tio medicinska scenarier och lottades till att använda en språkmodell eller vanlig informationssökning. Modellerna klarade scenarierna väl på egen hand, men deltagarna som använde dem klarade sig inte bättre än kontrollgruppen. Svagheten låg i samspelet: vad användarna frågade och hur de tolkade svaren.</p></div>
+    <div class="sol"><span class="lbl">Lösning</span><p>Att ett verktyg presterar bra i tester betyder inte att användarna gör det. Träna samspelet: hur man ställer frågor, granskar svar och vet när man ska gå vidare till en annan källa.</p></div>
+    <p class="src">Bean m.fl. (2026), Nature Medicine.</p>
+  </div>
+
+  <h3>Två exempel på när det fungerar</h3>
+  <div class="pair">
+    <h3>MASAI i Lund: fler cancrar hittade med mindre granskningsarbete</h3>
+    <div class="prob"><span class="lbl">Utmaning</span><p>Mammografiscreening kräver dubbelgranskning av två radiologer, och det råder brist på radiologer.</p></div>
+    <div class="sol"><span class="lbl">Lösning</span><p>I en randomiserad studie med AI-stödd screening hittades fler cancrar, samtidigt som granskningsarbetet minskade med 44 procent. AI sorterade bilderna efter risk och radiologerna granskade, med tydligt fördelade roller.</p></div>
+    <p class="src">Lång m.fl. (2023), The Lancet Oncology.</p>
+  </div>
+  <div class="pair">
+    <h3>ScreenTrustCAD i Stockholm: en radiolog plus AI</h3>
+    <div class="prob"><span class="lbl">Utmaning</span><p>Kan AI ersätta en av de två radiologerna utan att fler cancrar missas?</p></div>
+    <div class="sol"><span class="lbl">Lösning</span><p>I en prospektiv studie vid Capio S:t Görans sjukhus hittade en radiolog tillsammans med AI minst lika många cancrar som två radiologer. Avgörande var att studien var utformad i förväg för att mäta just det.</p></div>
+    <p class="src">Dembrower m.fl. (2023), The Lancet Digital Health.</p>
+  </div>
+  <p>Det gemensamma för de lyckade exemplen är att rollerna var bestämda i förväg, att resultaten mättes och att människan inte förväntades rätta systemet i varje enskilt fall utan hade en definierad uppgift.</p>
+
+    <div class="gate" data-kind="pause"><script type="application/json">{"q": "Vad hade de lyckade exemplen gemensamt som de misslyckade saknade? Formulera det med egna ord innan du läser vidare."}</script></div>
+  <h2>Samma mönster i utbildningen</h2>
+  <div class="table-wrap">
+  <table>
+    <caption>Fällorna i utbildningens vardag</caption>
+    <thead><tr><th scope="col">Fälla</th><th scope="col">Så kan den se ut</th><th scope="col">Det som hjälper</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">Automationsbias</th><td>En lärare litar på en AI-detektors siffra, eller på ett AI-förslag till betyg eller återkoppling.</td><td>Använd inte detektorer som underlag. Gör din egen bedömning mot kriterierna först.</td></tr>
+      <tr><th scope="row">Minskad vaksamhet</th><td>En student kopierar referenser från ett AI-svar utan att öppna dem.</td><td>Krav som går att kontrollera: sidhänvisningar till källor studenten har läst.</td></tr>
+      <tr><th scope="row">Kompetensförlust</th><td>Studenter som alltid skriver med AI-stöd tränar aldrig upp sitt eget skrivande och resonerande.</td><td>Moment där färdigheten övas utan stöd, och principen I &gt; AI &gt; I.</td></tr>
+      <tr><th scope="row">Utanför kretsen</th><td>En student kan inte förklara sin egen inlämning.</td><td>Ett planerat muntligt moment eller en dokumenterad process.</td></tr>
+      <tr><th scope="row">Ansvarsförskjutning</th><td>”Det var AI:n som skrev fel.”</td><td>Tydligt att studenten ansvarar för hela innehållet, och att läraren ansvarar för sina beslut.</td></tr>
+      <tr><th scope="row">Förmänskligande</th><td>Studenter behandlar en chattjänst som en lärare med auktoritet, eller som en vän.</td><td>Samtala om vad verktyget är och inte är. Använd det som en bland flera källor.</td></tr>
+      <tr><th scope="row">Undertro</th><td>En lärare förbjuder all AI efter ett dåligt exempel, också där den kunde stödja lärandet.</td><td>Pröva systematiskt och utgå från vad uppgiften ska mäta.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="ex" data-type="sort">
+    <script type="application/json">{
+      "badge": "Sortera", "title": "Vilken fälla är det?",
+      "intro": "Läs varje situation och välj den fälla som bäst beskriver vad som händer.",
+      "categories": ["Automationsbias", "Kompetensförlust", "Utanför kretsen", "Ansvarsförskjutning", "Förmänskligande"],
+      "items": [
+        {"t": "En granskare godkänner ett AI-förslag hon själv skulle ha bedömt annorlunda, eftersom systemet ”brukar ha rätt”.", "c": 0, "fb": "Klassisk automationsbias: förslaget väger tyngre än den egna bedömningen."},
+        {"t": "En student som har använt AI för alla skrivuppgifter under två år har svårt att formulera en argumenterande text på en salstentamen.", "c": 1, "fb": "Färdigheten har aldrig övats utan stöd. Det är kompetensförlust, eller snarare att kompetensen aldrig byggdes upp."},
+        {"t": "En student som har låtit AI skriva stora delar av en rapport kan inte svara på frågor om sina egna metodval vid seminariet.", "c": 2, "fb": "Studenten har inte varit delaktig i processen och saknar därför överblick."},
+        {"t": "En handläggare ska formellt fatta beslutet, men har tre minuter per ärende och inget underlag utöver systemets riskpoäng.", "c": 3, "fb": "Människan bär ansvaret men saknar förutsättningar att utöva det. ”Människa i loopen” blir ett alibi."},
+        {"t": "En student säger att hon frågade chattjänsten om tolkningen var rätt och att den ”förstod” vad hon menade och höll med.", "c": 4, "fb": "Studenten tillskriver verktyget förståelse och omdöme. Dessutom tenderar verktyg att hålla med användaren."},
+        {"t": "En lärare låter en AI-detektor avgöra vilka texter som ska anmälas.", "c": 0, "fb": "Detektorns siffra ersätter ett eget, grundat omdöme. Det är automationsbias, och dessutom ett underlag som studenten inte kan bemöta."}
+      ]
+    }</script>
+  </div>
+
+  <div class="ex" data-type="choice">
+    <script type="application/json">{
+      "badge": "Scenarier", "title": "Vad gör du?",
+      "intro": "Välj det alternativ som du tycker är bäst. Läs återkopplingen även om du valde rätt.",
+      "questions": [
+        {"q": "Du använder AI för att få förslag på återkoppling till 60 rapporter. Förslagen ser rimliga ut.", "options": [
+          {"t": "Jag skickar förslagen vidare efter en snabb blick.", "fb": "Risken för automationsbias är stor när förslagen ser rimliga ut och tiden är knapp. Fel och generiska kommentarer passerar."},
+          {"t": "Jag läser varje rapport själv först, noterar mina huvudpunkter och använder sedan AI-förslaget som komplement som jag granskar.", "ok": true, "fb": "Den egna bedömningen först skyddar mot att förslaget styr. Var också öppen mot studenterna med att AI har använts."},
+          {"t": "Jag låter AI sätta preliminära betyg som jag sedan justerar.", "fb": "Ett förslag till betyg styr din bedömning. Betygsbeslutet ska vara ditt eget, och AI-stödd bedömning av studieresultat räknas dessutom som högrisk enligt AI-förordningen."}
+        ]},
+        {"q": "En student hänvisar i en inlämning till fem källor. Två av dem finns inte.", "options": [
+          {"t": "Jag kör texten i en AI-detektor för att få bevis.", "fb": "Detektorer är inte tillförlitliga och ger inget underlag som studenten kan bemöta. Att ladda upp texten innebär dessutom att du behandlar studentens personuppgifter."},
+          {"t": "Jag bedömer referenserna som en kvalitetsbrist mot kriterierna, och överväger om det finns konkreta omständigheter som ger grundad misstanke om vilseledande.", "ok": true, "fb": "Påhittade referenser har i prövade ärenden inte räckt som enda bevis. De är förenliga både med slarv och med AI. Del 7 går igenom hur du resonerar."},
+          {"t": "Jag underkänner direkt och skriver att jag misstänker AI.", "fb": "En misstanke om vilseledande får inte hanteras med egna sanktioner. Den ska anmälas om den är grundad, och betyget ska vänta."}
+        ]},
+        {"q": "Din institution vill införa ett AI-stöd som är bättre än lärarna på att rätta en viss sorts uppgift.", "options": [
+          {"t": "Bra, då kan lärarna sluta rätta den sortens uppgifter helt.", "fb": "Då försvinner både kontrollen och lärarnas förmåga att upptäcka när systemet gör fel. Dessutom är AI-stödd bedömning av studieresultat högrisk enligt AI-förordningen."},
+          {"t": "Vi bestämmer rollerna i förväg, låter lärarna göra stickprov utan att se förslaget, följer upp oenighet och ser till att studenterna kan få bedömningen omprövad.", "ok": true, "fb": "Det är mönstret från de lyckade exemplen: definierade roller, mätning, verklig mänsklig granskning och en väg till omprövning."},
+          {"t": "Vi avstår helt eftersom systemet ibland gör fel.", "fb": "Att avstå kan vara rätt, men skälet bör inte vara att systemet ibland gör fel. Det gör människor också. Frågan är hur felen upptäcks och hanteras."}
+        ]},
+        {"q": "En student säger: ”Jag frågade AI och den sa att min analys var rätt.”", "options": [
+          {"t": "Jag förklarar att verktyget tenderar att hålla med användaren, och ber studenten be om motargument och jämföra med kurslitteraturen.", "ok": true, "fb": "Det tränar både AI-litteracitet och ämneskunskap, och flyttar granskningen tillbaka till studenten."},
+          {"t": "Jag säger att AI inte får användas.", "fb": "Det kan vara rätt regel för uppgiften, men det tar inte upp den viktiga frågan om varför ett medhåll från ett verktyg inte är en bekräftelse."},
+          {"t": "Jag säger att det är bra att studenten kontrollerade sin analys.", "fb": "Det förstärker föreställningen att verktyget kan bekräfta en tolkning. Medhåll är inte granskning."}
+        ]}
+      ]
+    }</script>
+  </div>
+
+  <div class="ex" data-type="reflect">
+    <script type="application/json">{
+      "id": "fallor", "badge": "Reflektion", "title": "Fällorna i ditt ämne",
+      "fields": [
+        {"label": "Vilken av de sju fällorna är störst i ditt ämne eller i det yrke dina studenter utbildas för?"},
+        {"label": "Vilka färdigheter måste dina studenter behärska utan AI för att kunna granska det AI producerar?", "hint": "Det är frågan som avgör var du behöver moment utan stöd."},
+        {"label": "Vilken konkret åtgärd skulle du kunna införa i en kurs redan nästa gång den ges?"}
+      ]
+    }</script>
+  </div>
+  <div class="gate" data-kind="exit"><script type="application/json">{"q": "Vad är det viktigaste du tar med dig från den här delen? Formulera det så att du kan använda det i nästa del."}</script></div>
+</div>
+
+<div class="l-en" lang="en">
+  <p class="crumbs">Part 3 of 9</p>
+  <h1>When AI outperforms humans</h1>
+  <p class="lead">It sounds reassuring that a human always has the final say. But when a system is usually right, the human's role changes: we stop checking, we lose skills, and we take responsibility for errors we are no longer in a position to detect. This part goes through the traps and what actually helps.</p>
+  <div class="meta-row"><span>About 3 hours</span><span>10 cases with problem and solution</span><span>3 exercises</span></div>
+
+  <section class="goals" aria-labelledby="g3en">
+    <h2 id="g3en">After this part you can</h2>
+    <ul>
+      <li>explain automation bias, deskilling and other problems that arise when AI outperforms humans</li>
+      <li>give concrete examples of how these problems have appeared in healthcare, public administration, the courts and education</li>
+      <li>propose measures that reduce the risks, in your own teaching and in students' learning</li>
+    </ul>
+  </section>
+  <div class="gate" data-kind="bridge"><script type="application/json">{"q": "In the previous part we concluded that we must examine output and use instead of the model. What do you think happens to that review when the system is almost always right?", "prev": "historia"}</script></div>
+
+
+  <h2>The ironies of automation</h2>
+  <p>As early as 1983, psychologist Lisanne Bainbridge described what she called the ironies of automation. When a system takes over the easy parts of a job, the human is left with two tasks she is poor at: monitoring a system that almost always works, and taking over when it suddenly does not. The better the system, the more rarely the human needs to intervene, and the less prepared she is when it happens.</p>
+  <p>That is why the phrase “a human always makes the decision” is not enough. The question is whether the human is in a position to make a decision of their own, or merely confirms the system's.</p>
+
+  <h2>Seven traps</h2>
+  <div class="grid">
+    <div class="card"><span class="tag">Trap 1</span><h3>Automation bias</h3><p>The tendency to give automated suggestions too much weight. It produces two kinds of error: following a wrong suggestion, and missing something the system did not flag.</p></div>
+    <div class="card"><span class="tag">Trap 2</span><h3>Complacency</h3><p>When a system is usually right we stop checking. Review becomes a formality.</p></div>
+    <div class="card"><span class="tag">Trap 3</span><h3>Deskilling</h3><p>Skills that are not practised weaken. Someone who always works with support may become worse without it.</p></div>
+    <div class="card"><span class="tag">Trap 4</span><h3>Out of the loop</h3><p>Someone who has not taken part in the process lacks an overview when they suddenly have to take over or explain.</p></div>
+    <div class="card"><span class="tag">Trap 5</span><h3>Shifted responsibility</h3><p>The human becomes responsible for the system's errors without having had the chance to detect them. “Human in the loop” becomes an alibi.</p></div>
+    <div class="card"><span class="tag">Trap 6</span><h3>Anthropomorphism</h3><p>We attribute understanding, judgement and authority to the system, especially when it sounds confident and friendly. This is the ELIZA effect.</p></div>
+    <div class="card"><span class="tag">Trap 7</span><h3>Under-trust</h3><p>The reverse: after seeing a single error we dismiss a system that is on average better than us. Both over- and under-trust lead to worse decisions.</p></div>
+  </div>
+
+    <div class="gate" data-kind="pause"><script type="application/json">{"q": "Think of your own everyday life: when did you last trust an automatic suggestion without checking it? What made you do so?"}</script></div>
+  <h2>Cases: problems and solutions</h2>
+  <p>The cases below come mainly from Sweden and Europe. They were chosen to show patterns that also appear in education.</p>
+
+  <div class="pair">
+    <h3>Mammography: when AI is wrong, so are we</h3>
+    <div class="prob"><span class="lbl">Problem</span><p>In a study from Germany and the Netherlands, 27 radiologists assessed mammograms with suggestions from a purported AI system. In 12 of 40 cases the suggestion was deliberately wrong. When it was wrong, the share of correct assessments fell sharply: from about 80 to 20 per cent for the least experienced, and from 82 to 45.5 per cent for the most experienced.</p></div>
+    <div class="sol"><span class="lbl">Solution</span><p>Make your own assessment before the AI suggestion is shown. Measure how often human and system disagree, and follow up those cases. Experience protects partly, but not fully.</p></div>
+    <p class="src">Dratsch et al. (2023), Radiology.</p>
+  </div>
+
+  <div class="pair">
+    <h3>Colonoscopy: worse without AI after getting used to it</h3>
+    <div class="prob"><span class="lbl">Problem</span><p>At four centres in Poland, researchers examined how often experienced endoscopists found precancerous lesions without AI support, before and after AI support was introduced. The rate fell from 28.4 to 22.4 per cent. The physicians had become worse at the task when doing it on their own.</p></div>
+    <div class="sol"><span class="lbl">Solution</span><p>Schedule regular practice without support and follow up results both with and without AI. This matters especially for people new to the profession who never built the skill without support.</p></div>
+    <p class="src">Budzyń et al. (2025), The Lancet Gastroenterology &amp; Hepatology.</p>
+  </div>
+
+  <div class="pair">
+    <h3>Aviation: when the automation lets go</h3>
+    <div class="prob"><span class="lbl">Problem</span><p>In 2009 the airspeed sensors on an Air France aircraft over the Atlantic iced up. The autopilot disconnected and the pilots suddenly had to fly by hand in a situation they had rarely practised. They did not recognise that the aircraft had stalled, and all 228 on board died. The French investigation authority pointed among other things to insufficient training in manual flying and in handling unexpected situations.</p></div>
+    <div class="sol"><span class="lbl">Solution</span><p>Train what to do when the system fails, not only what is done with the system. Practise surprises and takeovers.</p></div>
+    <p class="src">French Bureau of Enquiry and Analysis for Civil Aviation Safety (BEA) (2012), final report on flight AF 447.</p>
+  </div>
+
+  <div class="pair">
+    <h3>School placement in Gothenburg: an error nobody could see</h3>
+    <div class="prob"><span class="lbl">Problem</span><p>In 2020, about 12,000 children were placed in schools with the help of an algorithm. It measured distance as the crow flies instead of by walking route, and many children were given unreasonably long journeys. Almost 1,000 guardians appealed. The court could not see the systematic error, and an individual parent had no way to examine the algorithm.</p></div>
+    <div class="sol"><span class="lbl">Solution</span><p>Test the system's results against reality before it is used, document how it works, review deviating cases manually and make sure there is a way to have decisions reviewed.</p></div>
+    <p class="src">University of Gothenburg (2023), on research by Charlotta Kronblad.</p>
+  </div>
+
+  <div class="pair">
+    <h3>The Dutch childcare benefits scandal: a human in the loop who did not review</h3>
+    <div class="prob"><span class="lbl">Problem</span><p>The Dutch tax authority used a risk model to select childcare benefit applications for checks. Nationality was used as one of the risk factors. Thousands of families were wrongly accused of fraud and asked to repay large sums. The government resigned in 2021, and the data protection authority fined the tax authority for discriminatory processing of personal data.</p></div>
+    <div class="sol"><span class="lbl">Solution</span><p>Human review must be real: the case officer needs time, information and a mandate to go against the system. Variables that lead to discrimination should not be used, and those affected should be able to find out why.</p></div>
+    <p class="src">NOS (2021); Dutch parliamentary inquiry Ongekend onrecht (2020).</p>
+  </div>
+
+  <div class="pair">
+    <h3>Risk profiles in Sweden: review after the fact</h3>
+    <div class="prob"><span class="lbl">Problem</span><p>The Swedish Social Insurance Agency used a machine-learning risk profile to select cases of temporary parental benefit for checks. The Swedish Authority for Privacy Protection opened a supervisory case in 2025. The agency then stated that the profile had already been taken out of use, and the case was closed.</p></div>
+    <div class="sol"><span class="lbl">Solution</span><p>Carry out the impact assessment before the system is used, not after. Be open about automated selection and on what grounds it is made.</p></div>
+    <p class="src">Swedish Authority for Privacy Protection (2025), decision IMY-2025-11828.</p>
+  </div>
+
+  <div class="pair">
+    <h3>Courts in England: case law that does not exist</h3>
+    <div class="prob"><span class="lbl">Problem</span><p>In 2025 the High Court in London heard two cases in which lawyers had submitted citations to cases that did not exist. In one, 18 of 45 citations were invented. The court stated that generative AI cannot carry out reliable legal research.</p></div>
+    <div class="sol"><span class="lbl">Solution</span><p>Whoever submits is responsible for the content. Check every citation against an authoritative source. The same principle applies to students and teachers.</p></div>
+    <p class="src">High Court of England and Wales (2025), Ayinde v Haringey and Al-Haroun v Qatar National Bank.</p>
+  </div>
+
+  <div class="pair">
+    <h3>The model knows the answer, the user does not get it out</h3>
+    <div class="prob"><span class="lbl">Problem</span><p>In a study from Oxford, 1,298 people were given ten medical scenarios and randomised to use a language model or ordinary information search. The models handled the scenarios well on their own, but participants using them did no better than the control group. The weakness was in the interaction: what users asked and how they interpreted the answers.</p></div>
+    <div class="sol"><span class="lbl">Solution</span><p>A tool performing well in tests does not mean its users do. Train the interaction: how to ask, how to review answers and when to move to another source.</p></div>
+    <p class="src">Bean et al. (2026), Nature Medicine.</p>
+  </div>
+
+  <h3>Two examples of when it works</h3>
+  <div class="pair">
+    <h3>MASAI in Lund: more cancers found with less reading work</h3>
+    <div class="prob"><span class="lbl">Challenge</span><p>Mammography screening requires double reading by two radiologists, and radiologists are in short supply.</p></div>
+    <div class="sol"><span class="lbl">Solution</span><p>In a randomised trial of AI-supported screening, more cancers were found while reading work fell by 44 per cent. AI triaged the images by risk and radiologists read them, with clearly allocated roles.</p></div>
+    <p class="src">Lång et al. (2023), The Lancet Oncology.</p>
+  </div>
+  <div class="pair">
+    <h3>ScreenTrustCAD in Stockholm: one radiologist plus AI</h3>
+    <div class="prob"><span class="lbl">Challenge</span><p>Can AI replace one of the two radiologists without more cancers being missed?</p></div>
+    <div class="sol"><span class="lbl">Solution</span><p>In a prospective study at Capio S:t Göran Hospital, one radiologist together with AI found at least as many cancers as two radiologists. Crucially, the study was designed in advance to measure exactly that.</p></div>
+    <p class="src">Dembrower et al. (2023), The Lancet Digital Health.</p>
+  </div>
+  <p>What the successful examples share is that roles were decided in advance, results were measured, and the human was not expected to correct the system in every single case but had a defined task.</p>
+
+    <div class="gate" data-kind="pause"><script type="application/json">{"q": "What did the successful examples have in common that the failed ones lacked? Put it in your own words before reading on."}</script></div>
+  <h2>The same patterns in education</h2>
+  <div class="table-wrap">
+  <table>
+    <caption>The traps in everyday education</caption>
+    <thead><tr><th scope="col">Trap</th><th scope="col">What it can look like</th><th scope="col">What helps</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">Automation bias</th><td>A teacher trusts an AI detector's score, or an AI suggestion for a grade or feedback.</td><td>Do not use detectors as evidence. Make your own assessment against the criteria first.</td></tr>
+      <tr><th scope="row">Complacency</th><td>A student copies references from an AI answer without opening them.</td><td>Requirements that can be checked: page references to sources the student has read.</td></tr>
+      <tr><th scope="row">Deskilling</th><td>Students who always write with AI support never develop their own writing and reasoning.</td><td>Parts where the skill is practised without support, and the I &gt; AI &gt; I principle.</td></tr>
+      <tr><th scope="row">Out of the loop</th><td>A student cannot explain their own submission.</td><td>A planned oral part or a documented process.</td></tr>
+      <tr><th scope="row">Shifted responsibility</th><td>“It was the AI that got it wrong.”</td><td>Make clear that the student is responsible for all content, and the teacher for their decisions.</td></tr>
+      <tr><th scope="row">Anthropomorphism</th><td>Students treat a chat service as a teacher with authority, or as a friend.</td><td>Talk about what the tool is and is not. Use it as one source among several.</td></tr>
+      <tr><th scope="row">Under-trust</th><td>A teacher bans all AI after one bad example, including where it could support learning.</td><td>Test systematically and start from what the task is meant to measure.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="ex" data-type="sort">
+    <script type="application/json">{
+      "badge": "Sort", "title": "Which trap is it?",
+      "intro": "Read each situation and choose the trap that best describes what is happening.",
+      "categories": ["Automation bias", "Deskilling", "Out of the loop", "Shifted responsibility", "Anthropomorphism"],
+      "items": [
+        {"t": "A reviewer approves an AI suggestion she would herself have judged differently, because the system “is usually right”.", "c": 0, "fb": "Classic automation bias: the suggestion outweighs her own judgement."},
+        {"t": "A student who has used AI for every writing task for two years struggles to write an argumentative text in a supervised exam.", "c": 1, "fb": "The skill was never practised without support. It is deskilling, or rather the skill was never built."},
+        {"t": "A student who let AI write large parts of a report cannot answer questions about their own method choices at the seminar.", "c": 2, "fb": "The student has not taken part in the process and therefore lacks an overview."},
+        {"t": "A case officer formally makes the decision but has three minutes per case and nothing to go on beyond the system's risk score.", "c": 3, "fb": "The human carries responsibility but lacks the means to exercise it. “Human in the loop” becomes an alibi."},
+        {"t": "A student says she asked the chat service whether her interpretation was right and that it “understood” what she meant and agreed.", "c": 4, "fb": "The student attributes understanding and judgement to the tool. Tools also tend to agree with the user."},
+        {"t": "A teacher lets an AI detector decide which texts to report.", "c": 0, "fb": "The detector's score replaces a grounded judgement of one's own. That is automation bias, and it also produces evidence the student cannot respond to."}
+      ]
+    }</script>
+  </div>
+
+  <div class="ex" data-type="choice">
+    <script type="application/json">{
+      "badge": "Scenarios", "title": "What do you do?",
+      "intro": "Choose the option you think is best. Read the feedback even if you chose correctly.",
+      "questions": [
+        {"q": "You use AI to get suggested feedback on 60 reports. The suggestions look reasonable.", "options": [
+          {"t": "I pass the suggestions on after a quick look.", "fb": "The risk of automation bias is high when suggestions look reasonable and time is short. Errors and generic comments get through."},
+          {"t": "I read each report myself first, note my main points, and then use the AI suggestion as a complement that I review.", "ok": true, "fb": "Your own assessment first protects against the suggestion steering you. Also be open with students that AI has been used."},
+          {"t": "I let AI set provisional grades that I then adjust.", "fb": "A suggested grade steers your assessment. The grading decision must be your own, and AI-supported assessment of learning outcomes is also classed as high-risk under the AI Act."}
+        ]},
+        {"q": "A student cites five sources in a submission. Two of them do not exist.", "options": [
+          {"t": "I run the text through an AI detector to get proof.", "fb": "Detectors are unreliable and produce nothing the student can respond to. Uploading the text also means processing the student's personal data."},
+          {"t": "I assess the references as a quality issue against the criteria, and consider whether concrete circumstances give grounded suspicion of deception.", "ok": true, "fb": "In tried cases, invented references have not been enough as the only evidence. They are consistent both with carelessness and with AI. Part 7 goes through how to reason."},
+          {"t": "I fail the work immediately and write that I suspect AI.", "fb": "A suspicion of deception must not be handled with your own sanctions. It should be reported if grounded, and the grade should wait."}
+        ]},
+        {"q": "Your department wants to introduce an AI tool that is better than the teachers at marking a certain kind of task.", "options": [
+          {"t": "Good, then the teachers can stop marking that kind of task altogether.", "fb": "Then both the check and the teachers' ability to notice when the system errs disappear. AI-supported assessment of learning outcomes is also high-risk under the AI Act."},
+          {"t": "We decide roles in advance, let teachers spot-check without seeing the suggestion, follow up disagreements and make sure students can have the assessment reviewed.", "ok": true, "fb": "That is the pattern from the successful examples: defined roles, measurement, real human review and a route to review."},
+          {"t": "We refrain entirely because the system sometimes makes mistakes.", "fb": "Refraining may be right, but the reason should not be that the system sometimes errs. So do people. The question is how errors are detected and handled."}
+        ]},
+        {"q": "A student says: “I asked AI and it said my analysis was right.”", "options": [
+          {"t": "I explain that the tool tends to agree with the user, and ask the student to ask for counter-arguments and compare with the course literature.", "ok": true, "fb": "That trains both AI literacy and subject knowledge, and moves the review back to the student."},
+          {"t": "I say that AI may not be used.", "fb": "That may be the right rule for the task, but it does not address the important question of why agreement from a tool is not confirmation."},
+          {"t": "I say it is good that the student checked their analysis.", "fb": "That reinforces the idea that the tool can confirm an interpretation. Agreement is not review."}
+        ]}
+      ]
+    }</script>
+  </div>
+
+  <div class="ex" data-type="reflect">
+    <script type="application/json">{
+      "id": "fallor", "badge": "Reflection", "title": "The traps in your subject",
+      "fields": [
+        {"label": "Which of the seven traps is the biggest in your subject or in the profession your students are trained for?"},
+        {"label": "Which skills must your students master without AI to be able to review what AI produces?", "hint": "This is the question that decides where you need parts without support."},
+        {"label": "What concrete measure could you introduce in a course the next time it runs?"}
+      ]
+    }</script>
+  </div>
+  <div class="gate" data-kind="exit"><script type="application/json">{"q": "What is the most important thing you take with you from this part? Phrase it so that you can use it in the next part."}</script></div>
+</div>
+<section class="journey" aria-live="polite"></section>
+<nav class="pager" aria-label="Sidor / Pages"><a class="prev" href="historia.html" data-internal rel="prev"><small><span class="l-sv">Föregående</span><span class="l-en">Previous</span></small><span class="l-sv">Från MYCIN till miljarder parametrar</span><span class="l-en">From MYCIN to billions of parameters</span></a><a class="next" href="ai-litteracitet.html" data-internal rel="next"><small><span class="l-sv">Nästa</span><span class="l-en">Next</span></small><span class="l-sv">AI-litteracitet</span><span class="l-en">AI literacy</span></a></nav>
+</main>
+</div>
+<footer class="site"><div class="inner">
+<p><span class="l-sv">Educate, Jönköping University. Materialet är stöd och rekommendationer, inte policy eller ett JU-gemensamt beslut. Vad som gäller i en viss kurs och examination beslutar examinator.</span><span class="l-en">Educate, Jönköping University. The material is support and recommendations, not policy or a university-wide decision. What applies in a particular course and examination is decided by the examiner.</span></p>
+<p><span class="l-sv">Licens: CC BY-NC-SA 4.0. Delar bygger på material från Stanford Teaching Commons under samma licens.</span><span class="l-en">Licence: CC BY-NC-SA 4.0. Parts build on material from Stanford Teaching Commons under the same licence.</span></p>
+</div></footer>
+</body>
+</html>

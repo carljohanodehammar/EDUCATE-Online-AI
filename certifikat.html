@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="sv" data-lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-sv="Certifikat | AI i utbildning" data-en="Certificate | AI in education">Certifikat | AI i utbildning</title>
+<meta name="description" content="Hämta ett certifikat med unik kod när du har gått igenom alla delar.">
+<link rel="stylesheet" href="assets/style.css">
+<script>(function(){try{var q=new URLSearchParams(location.search).get('lang');var l=q||JSON.parse(localStorage.getItem('aiu:lang')||'"sv"');if(l==='en'){document.documentElement.lang='en';document.documentElement.dataset.lang='en';}}catch(e){}})();</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
+<script src="assets/cert-images.js" defer></script>
+<script src="assets/app.js" defer></script>
+</head>
+<body data-page="certifikat">
+<a class="skip" href="#main"><span class="l-sv">Hoppa till innehållet</span><span class="l-en">Skip to content</span></a>
+<header class="top">
+  <div class="top-inner">
+    <a class="brand" href="index.html" data-internal>
+      <span class="brand-mark" aria-hidden="true">JU</span>
+      <span class="brand-text"><strong><span class="l-sv">AI i utbildning</span><span class="l-en">AI in education</span></strong>
+      <span><span class="l-sv">En gemensam kunskapsram</span><span class="l-en">A shared knowledge base</span> · Jönköping University</span></span>
+    </a>
+    <div class="top-actions">
+      <button type="button" class="btn-top menu-btn" id="menuBtn" aria-controls="side" aria-expanded="false">Meny</button>
+      <button type="button" class="btn-top" id="langBtn" lang="en" aria-label="Switch to English">English</button>
+    </div>
+  </div>
+</header>
+<div class="layout">
+<nav class="side" id="side" aria-labelledby="navTitle"><h2 id="navTitle"><span class="l-sv">Innehåll</span><span class="l-en">Contents</span></h2><ol><li><a href="index.html" data-internal data-page="index"><span class="num" aria-hidden="true"></span><span><span class="l-sv">Start</span><span class="l-en">Start</span></span><span></span></a></li></ol><h2 class="group"><span class="l-sv">Delar</span><span class="l-en">Parts</span></h2><ol><li><a href="vad-ar-ai.html" data-internal data-page="vad-ar-ai"><span class="num" aria-hidden="true">1</span><span><span class="l-sv">Vad är AI?</span><span class="l-en">What is AI?</span></span><span class="done" role="img"></span></a></li><li><a href="historia.html" data-internal data-page="historia"><span class="num" aria-hidden="true">2</span><span><span class="l-sv">Historia och granskning</span><span class="l-en">History and inspection</span></span><span class="done" role="img"></span></a></li><li><a href="nar-ai-ar-battre.html" data-internal data-page="nar-ai-ar-battre"><span class="num" aria-hidden="true">3</span><span><span class="l-sv">När AI är bättre</span><span class="l-en">When AI is better</span></span><span class="done" role="img"></span></a></li><li><a href="ai-litteracitet.html" data-internal data-page="ai-litteracitet"><span class="num" aria-hidden="true">4</span><span><span class="l-sv">AI-litteracitet</span><span class="l-en">AI literacy</span></span><span class="done" role="img"></span></a></li><li><a href="ai-och-larande.html" data-internal data-page="ai-och-larande"><span class="num" aria-hidden="true">5</span><span><span class="l-sv">AI och lärande</span><span class="l-en">AI and learning</span></span><span class="done" role="img"></span></a></li><li><a href="lagar-och-etik.html" data-internal data-page="lagar-och-etik"><span class="num" aria-hidden="true">6</span><span><span class="l-sv">Lagar och etik</span><span class="l-en">Law and ethics</span></span><span class="done" role="img"></span></a></li><li><a href="rattssaker-examination.html" data-internal data-page="rattssaker-examination"><span class="num" aria-hidden="true">7</span><span><span class="l-sv">Rättssäker examination</span><span class="l-en">Legally secure examination</span></span><span class="done" role="img"></span></a></li><li><a href="lararens-arbete.html" data-internal data-page="lararens-arbete"><span class="num" aria-hidden="true">8</span><span><span class="l-sv">Lärarens arbete</span><span class="l-en">The teacher's work</span></span><span class="done" role="img"></span></a></li><li><a href="planera.html" data-internal data-page="planera"><span class="num" aria-hidden="true">9</span><span><span class="l-sv">Planera med ramverk</span><span class="l-en">Planning with frameworks</span></span><span class="done" role="img"></span></a></li></ol><h2 class="group"><span class="l-sv">Stöd</span><span class="l-en">Support</span></h2><ol><li><a href="begrepp.html" data-internal data-page="begrepp"><span class="num" aria-hidden="true"></span><span><span class="l-sv">Begrepp</span><span class="l-en">Glossary</span></span><span></span></a></li><li><a href="kallor.html" data-internal data-page="kallor"><span class="num" aria-hidden="true"></span><span><span class="l-sv">Källor</span><span class="l-en">Sources</span></span><span></span></a></li><li><a href="certifikat.html" data-internal data-page="certifikat" aria-current="page"><span class="num" aria-hidden="true"></span><span><span class="l-sv">Certifikat</span><span class="l-en">Certificate</span></span><span></span></a></li></ol></nav>
+<main id="main" tabindex="-1">
+<div class="l-sv" lang="sv">
+  <h1>Certifikat</h1>
+  <p class="lead">När du har gått igenom alla nio delar kan du skapa ett certifikat med en unik kod och ladda ner det som PDF.</p>
+  <div class="box">
+    <span class="box-title">Så fungerar det</span>
+    <ul>
+      <li>En del räknas som genomgången när du har gjort övningarna och skrivit vad du tar med dig i slutet av delen.</li>
+      <li>Dina framsteg sparas bara i den webbläsare du använder. Använd samma dator och webbläsare hela vägen, och rensa inte webbplatsdata under tiden.</li>
+      <li>Certifikatet får en unik kod. Skicka registreringen till Educate med knappen nedan, så kan certifikatet valideras i efterhand.</li>
+      <li>Ditt namn och dina uppgifter skickas ingenstans förrän du själv väljer att skicka registreringen.</li>
+    </ul>
+  </div>
+  <div class="cert-app">
+    <script type="application/json">{
+      "email": "educate@ju.se",
+      "organiser": ["Educator Centre for Academic Teaching and Learning", "at Jönköping University", "EDUCATE"],
+      "activity": "AI in Education: a shared knowledge base",
+      "type": "Online self-study",
+      "facilitators": "",
+      "footer": ["Note, this diploma is not an official degree awarded by Jönköping University", "This certificate can be validated using a unique identifier. To validate, send the unique identifier to educate@ju.se."],
+      "mailSubject": "Registration of certificate",
+      "mailBody": "Please register my certificate for the online material AI in Education: a shared knowledge base."
+    }</script>
+  </div>
+</div>
+
+<div class="l-en" lang="en">
+  <h1>Certificate</h1>
+  <p class="lead">When you have completed all nine parts, you can create a certificate with a unique identifier and download it as a PDF.</p>
+  <div class="box">
+    <span class="box-title">How it works</span>
+    <ul>
+      <li>A part counts as completed when you have done the exercises and written what you take with you at the end of the part.</li>
+      <li>Your progress is saved only in the browser you use. Use the same computer and browser throughout, and do not clear site data in the meantime.</li>
+      <li>The certificate gets a unique identifier. Send the registration to Educate with the button below, so that the certificate can be validated later.</li>
+      <li>Your name and details are not sent anywhere until you choose to send the registration yourself.</li>
+    </ul>
+  </div>
+  <div class="cert-app">
+    <script type="application/json">{
+      "email": "educate@ju.se",
+      "organiser": ["Educator Centre for Academic Teaching and Learning", "at Jönköping University", "EDUCATE"],
+      "activity": "AI in Education: a shared knowledge base",
+      "type": "Online self-study",
+      "facilitators": "",
+      "footer": ["Note, this diploma is not an official degree awarded by Jönköping University", "This certificate can be validated using a unique identifier. To validate, send the unique identifier to educate@ju.se."],
+      "mailSubject": "Registration of certificate",
+      "mailBody": "Please register my certificate for the online material AI in Education: a shared knowledge base."
+    }</script>
+  </div>
+</div>
+
+<nav class="pager" aria-label="Sidor / Pages"><a class="prev" href="kallor.html" data-internal rel="prev"><small><span class="l-sv">Föregående</span><span class="l-en">Previous</span></small><span class="l-sv">Källor och vidare läsning</span><span class="l-en">Sources and further reading</span></a></nav>
+</main>
+</div>
+<footer class="site"><div class="inner">
+<p><span class="l-sv">Educate, Jönköping University. Materialet är stöd och rekommendationer, inte policy eller ett JU-gemensamt beslut. Vad som gäller i en viss kurs och examination beslutar examinator.</span><span class="l-en">Educate, Jönköping University. The material is support and recommendations, not policy or a university-wide decision. What applies in a particular course and examination is decided by the examiner.</span></p>
+<p><span class="l-sv">Licens: CC BY-NC-SA 4.0. Delar bygger på material från Stanford Teaching Commons under samma licens.</span><span class="l-en">Licence: CC BY-NC-SA 4.0. Parts build on material from Stanford Teaching Commons under the same licence.</span></p>
+</div></footer>
+</body>
+</html>
